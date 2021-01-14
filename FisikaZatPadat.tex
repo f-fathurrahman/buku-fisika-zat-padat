@@ -1,0 +1,114 @@
+%\documentclass[graybox,envcountchap,sectrefs,default]{svmono}
+\documentclass[a4paper,11pt,bahasa]{extbook}
+
+\usepackage{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm}
+
+% DRAFT SETTINGS: easier to read in dark mode
+%\usepackage{cmbright}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[libertine]{newtxmath}
+\usepackage[no-math]{fontspec}
+\setmainfont{Linux Libertine O}
+
+%\usepackage{fontspec}
+%\setmainfont{FreeSerif}
+%\setmonofont{FreeMono}
+%\setmonofont{DejaVu Sans Mono}
+\setmonofont{JuliaMono-Regular}
+
+\usepackage{framed}
+
+\usepackage{braket}
+\usepackage{mhchem}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{minted}
+% using DejaVu Sans Mono or some other fonts, we need to scale the font size
+% to smaller size to match the main font.
+\newminted{julia}{breaklines,fontsize=\footnotesize}
+\newminted{python}{breaklines,fontsize=\footnotesize}
+\newminted{bash}{breaklines,fontsize=\footnotesize}
+\newminted{text}{breaklines,fontsize=\footnotesize}
+
+\newcommand{\txtinline}[1]{\mintinline[fontsize=\footnotesize]{text}{#1}}
+\newcommand{\jlinline}[1]{\mintinline[fontsize=\footnotesize]{julia}{#1}}
+\newcommand{\pyinline}[1]{\mintinline[fontsize=\footnotesize]{python}{#1}}
+
+\newmintedfile[juliafile]{julia}{breaklines,fontsize=\footnotesize}
+
+\usepackage{float}
+\newfloat{mintedfloat}{h}{lop}
+\floatname{mintedfloat}{Listing}
+
+% Using background color for minted environment
+\usepackage{xcolor}
+\usepackage{mdframed}
+
+\definecolor{mintedbg}{rgb}{0.9,0.9,0.9}
+\BeforeBeginEnvironment{minted}{
+    \begin{mdframed}[backgroundcolor=mintedbg,%
+        topline=false,bottomline=false,%
+        leftline=false,rightline=false]
+}
+\AfterEndEnvironment{minted}{\end{mdframed}}
+
+\newcounter{example}[chapter]
+\newenvironment{example}[1][]{\refstepcounter{example}\par\medskip
+   \noindent \textbf{Contoh~\theexample. #1} \rmfamily}{\medskip}
+
+\definecolor{examplebg}{rgb}{0.9,0.9,0.9}
+\BeforeBeginEnvironment{example}{
+    \begin{mdframed}[backgroundcolor=examplebg,%
+        topline=true,bottomline=true,%
+        leftline=false,rightline=false]
+}
+\AfterEndEnvironment{example}{\end{mdframed}}
+
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{makeidx}
+\makeindex
+
+\begin{document}
+
+\title{Fisika Zat Padat}
+\author{Fadjar Fathurrahman}
+\maketitle
+
+\frontmatter
+
+%\include{dedication}
+%\include{foreword}
+%\include{preface}
+%\include{acknowledgement}
+
+\tableofcontents
+
+\mainmatter
+
+\include{Ch01}
+
+%\appendix
+%\include{PythonProg}
+
+\bibliographystyle{unsrt}
+\bibliography{BIBLIO}
+
+\printindex
+
+\end{document}

@@ -1,0 +1,29 @@
+\chapter{Model Zat Padat tanpa Struktur Mikroskopik}
+
+Hukum Dulong-Petit (1819), kapasitas kalor dari banyak padatan:
+\begin{align}
+C & = 3k_{B}\,\,\text{per atom} \\
+\text{atau}\,\, C & = 3R
+\end{align}
+
+\section{Model Einstein}
+
+Padatan dianggap sebagai kumpulan osilator harmonik.
+Energi eigen dari satu osilator harmonik:
+\begin{equation}
+E_{n} = \hbar \omega ( n + 1/2 )
+\end{equation}
+dengan $\omega$ adalah frekuensi dari osilator harmonik, atau
+frekuensi Einsten.
+Fungsi partisi dari sistem ini adalah:
+\begin{align*}
+Z_{1D} & = \sum_{n \geq 0} e^{-\beta\hbar\omega(n + 1/2)} \\
+& = \frac{e^{-\beta\hbar\omega/2}}{1 - e^{-\beta\hbar\omega}} \\
+& = \frac{1}{2\sinh(\beta\hbar\omega/2)}
+\end{align*}
+Nilai ekspektasi dari energi adalah:
+\begin{align*}
+\braket{E} = -\frac{1}{Z_{1D}}\frac{\partial Z_{1D}}{\partial \beta}
+= \frac{\hbar\omega}{2}
+\end{align*}
+
