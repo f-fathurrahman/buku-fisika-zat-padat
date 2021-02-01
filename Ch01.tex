@@ -23,7 +23,7 @@ adalah nol:
 \end{equation}
 Energi kinetik partikel pada temperatur $T$ adalah
 \begin{equation}
-E_{k} = \frac{1}{2} m v^2 = k_{\mathrm{B}} T
+E_{k} = \frac{1}{2} m v^2 = k_{B} T
 \end{equation}
 Misalkan terdapat $N$ partikel dan $\mathrm{d}N$ melambangkan jumlah partikel
 gas yang memiliki kecepatan antara $v$ dan $v + \mathrm{d}v$, maka fraksi partikel
@@ -34,14 +34,14 @@ ekipartisi, semua partikel bebas bergerak sepanjang sumbu $x$, $y$, dan $z$.
 Pada ekuilibrium, energi total partikel terbagi rata untuk semua derajat kebebasan
 gerakan partikel. Setiap derajat kebebasan dari partikel yang bergerak mempunyai energi
 \begin{equation*}
-E = \frac{1}{2} m v^2 = \frac{1}{2} k_{\mathbf{B}} T
+E = \frac{1}{2} m v^2 = \frac{1}{2} k_{B} T
 \end{equation*}
 
 Nilai ekspektasi dari energi total adalah:
 \begin{align*}
 \braket{E} & = E_{x} + E_{y} + E_{z} \\
 & = \frac{1}{2} m v_{x}^2 + \frac{1}{2} m v_{y}^2 + \frac{1}{2} m v_{z}^2 \\
-& = \frac{3}{2} k_{\mathrm{B}} T
+& = \frac{3}{2} k_{B} T
 \end{align*}
 
 Jika partikel adalah molekul monotaomik, maka gerakan molekul yang terlibat hanya
@@ -52,7 +52,7 @@ dan vibrasi. Gerakan rotasi melibatkan momen inersia $E = \frac{1}{2} I \omega^2
 dan gerakan vibrasi melibatkan energi $E = \frac{1}{2}kx^2$.
 
 Jika ada $N$ partikel pada temperatur $T$ maka energi total adalah
-$\braket{E} = \frac{1}{2}Nk_{\mathrm{B}}T$.
+$\braket{E} = \frac{1}{2}Nk_{B}T$.
 
 Dalam teori kinetik gas, energi potensial akibat itneraksi antar partikel gas dianggap nol.
 
@@ -98,7 +98,9 @@ Komerling Onnes(1911) mencairkan gas Nitrogen sehingga kita dapat mencapai
 suhu 4.2 K. Berkembang eksperimen pada T rendah, termasuk pengukuran $C_v$
 pada T rendah? Hasilnya adalah XXXgrafikXXX.
 
-Albert Eisntein mengembangkan teori Boltzmann dengan asumsi
+\section{Model Einstein}
+
+Albert Einstein mengembangkan teori Boltzmann dengan asumsi
 \begin{itemize}
 \item Padatan terdiri dari $N$ atom, dipandang sebagai $3N$ atom yang direpresentasikan
 dengan $3N$ osilator harmonik yang identik dengan frekuensi yang sama, yaitu $\nu$.
@@ -134,24 +136,57 @@ C_{v} = 3R \left(\frac{\theta_{E}}{T}\right)^2
 \frac{e^{\theta_{E}/T}}{(e^{\theta_{E}/T} - 1)^2}
 \end{equation}
 
-\section{Model Einstein}
+dengan $R = N_{A}k$ dan $\theta_{E} = \frac{h\nu}{k}$ adalah temperatur Einstein.
 
-Padatan dianggap sebagai kumpulan osilator harmonik.
-Energi eigen dari satu osilator harmonik:
-\begin{equation}
-E_{n} = \hbar \omega ( n + 1/2 )
-\end{equation}
-dengan $\omega$ adalah frekuensi dari osilator harmonik, atau
-frekuensi Einsten.
-Fungsi partisi dari sistem ini adalah:
+Untuk temperatur tinggi $T >> \frac{h\nu}{k}$ atau $T >> \theta_{E}$
+\begin{equation*}
+e^{h\nu/kT} - 1 = \left( 1 + \frac{h\nu}{kT} + \ldots \right) - 1 = \frac{h\nu}{kT}
+\end{equation*}
+diperoleh:
+\begin{equation*}
+\braket{E} = \frac{h\nu}{e^{h\nu/kT} - 1} \approx \frac{h\nu}{h\nu/kT} = kT
+\end{equation*}
+sehingga:
+\begin{equation*}
+C_{v} = \left( \frac{\partial E}{\partial T} \right)_{v} = 3R
+\end{equation*}
+yang sama dengan hasil klasik Dulong-Petit.
+
+
+Untuk temperatur rendah: $T << \frac{h\nu}{k}$ atau $T << \theta_{E}$
+atau $e^{h\nu/kT} >> 1$ sehingga:
+\begin{equation*}
+\braket{E} = \frac{h\nu}{e^{h\nu/kT} - 1} \approx \frac{h\nu}{e^{h\nu/kT}} =
+h\nu e^{-h\nu/kT}
+\end{equation*}
+Untuk 1 mol padatan diperoleh $E = 3N_{A}\braket{E}$, sehingga:
 \begin{align*}
-Z_{1D} & = \sum_{n \geq 0} e^{-\beta\hbar\omega(n + 1/2)} \\
-& = \frac{e^{-\beta\hbar\omega/2}}{1 - e^{-\beta\hbar\omega}} \\
-& = \frac{1}{2\sinh(\beta\hbar\omega/2)}
+C_{v} & = 3N_{A} h\nu \frac{\partial}{\partial T}\left(
+e^{-h\nu/kT} \right) \\
+& = 3N_{A} h\nu \frac{h\nu}{kT^2} e^{-h\nu/kT} \\
+& = 3N_{A} k \left( \frac{h\nu}{kT} \right)^2 \\
+& = 3R \left( \frac{\theta_{E}}{T} \right) e^{\theta_{E}/T}
 \end{align*}
-Nilai ekspektasi dari energi adalah:
-\begin{align*}
-\braket{E} = -\frac{1}{Z_{1D}}\frac{\partial Z_{1D}}{\partial \beta}
-= \frac{\hbar\omega}{2}
-\end{align*}
+Hasil dari model Einstein memberikan  $C_{v} \propto e^{-\theta_{E}/T}$
+sedangkan eksperimen memberikan hasil $C_{v} \propto T^{3}$.
+Perbedaan ini terjadi karena Einstein berasumsi osilator bervibrasi dengan frekuensi sama.
+
+\section{Model Debye}
+
+Peter Debye (1912) mengembangkan teori Boltzmann dengan asumsi:
+\begin{itemize}
+\item Padatan terdiri dari $N$ atom, bervibrasi normal mode 3N dengan frekuensi
+$\nu_{1}, \nu_{2}, \nu_{3} \ldots \nu_{3N}$
+\item Debye menempatkan frekuensi cut-off $\nu_{D}$, dimana pada frekuensi lebih
+tinggi dari $\nu_{D}$ tidak ada mode vibrasi padatan,
+\item Padatan dipandang sebagai fonon gas (molekul tersusun dalam padatan bervibrasi secara elastis)
+\item Fonon sebagai partikel identik dengan spin nol,
+tidak dapat dibedakan dan mengikuti distribusi Bose-Einstein.
+\item Atom-atom bervibrasi dalam 2 mode: 1 vibrasi longitudinal (searah dengan rambatan) dan 2 vibrasi
+transversal (tegak lurus arah rambatan) pada frekuensi antara $\nu$ dan $\nu + \mathrm{d}\nu$
+\end{itemize}
+
+
+\input{ModelEinsten_alt}
+
 

@@ -1,0 +1,54 @@
+\section{Model Einstein alternatif}
+
+Padatan dianggap sebagai kumpulan osilator harmonik.
+Energi eigen dari satu osilator harmonik:
+\begin{equation}
+E_{n} = \hbar \omega ( n + 1/2 )
+\end{equation}
+dengan $\omega$ adalah frekuensi dari osilator harmonik, atau
+frekuensi Einsten.
+Fungsi partisi dari sistem ini adalah:
+\begin{align*}
+Z_{1D} & = \sum_{n \geq 0} e^{-\beta\hbar\omega(n + 1/2)} \\
+& = \frac{e^{-\beta\hbar\omega/2}}{1 - e^{-\beta\hbar\omega}}
+\end{align*}
+Nilai ekspektasi dari energi adalah:
+\begin{align*}
+\braket{E} & = -\frac{1}{Z_{1D}}\frac{\partial Z_{1D}}{\partial \beta} \\
+& = \hbar \omega \left( n_{B}(\beta\hbar\omega) + \frac{1}{2} \right)
+\end{align*}
+dengan $n_{B}$ adalah faktor okupansi Bose:
+\begin{equation}
+n_{B}(x) = \frac{1}{e^{x} - 1}
+\end{equation}
+Kapasitas kalor dapat dihitung dari:
+\begin{equation}
+C = \frac{\partial \braket{E}}{\partial T} = k_{B} (\beta \hbar \omega )^2
+\frac{e^{\beta\hbar\omega}}{(e^{\beta\hbar\omega} - 1)^2}
+\end{equation}
+Pada limit temperatur yang tinggi, kita mendapatkan $C = k_{B}$.
+
+Untuk kasus 3D kita memiliki:
+\begin{equation*}
+E_{n_x,n_y,n_z} = \hbar \omega \left[
+\left(n_x + \frac{1}{2}\right) +
+\left(n_y + \frac{1}{2}\right) +
+\left(n_z + \frac{1}{2}\right)
+\right]
+\end{equation*}
+dan fungsi partisi:
+\begin{equation*}
+Z_{3D} = \sum_{n_x,n_y,n_z \geq 0} e^{\beta E_{n_x,n_y,n_z}} = (Z_{1D})^{3}
+\end{equation*}
+sehingga:
+\begin{equation*}
+\braket{E_{3D}} = 3\braket{E_{1D}}
+\end{equation*}
+dan
+\begin{equation*}
+C = 3 k_{B} (\beta \hbar \omega )^2
+\frac{e^{\beta\hbar\omega}}{(e^{\beta\hbar\omega} - 1)^2}
+\end{equation*}
+
+Pada limit temperatur yang tinggi, atau $k_{B}T >> \hbar \omega$ kita
+mendapatkan $C = 3k_{B}$
