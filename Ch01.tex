@@ -6,6 +6,134 @@ C & = 3k_{B}\,\,\text{per atom} \\
 \text{atau}\,\, C & = 3R
 \end{align}
 
+
+\section{Teori kinetika gas}
+Asumsi:
+\begin{itemize}
+\item partikel gas bergerak bebas (random) dalam ruang tertutup
+\item partikel gas bisa menumbuk dinding
+\item partikel gas berbentuk bola
+\item partikel gas bisa saling bertumbukan, tetapi tidak saling berinteraksi
+\end{itemize}
+
+Karena partikel terus-menerus bertumbukan secara random, maka rata-rata momentumnya
+adalah nol:
+\begin{equation}
+\braket{p} = 0
+\end{equation}
+Energi kinetik partikel pada temperatur $T$ adalah
+\begin{equation}
+E_{k} = \frac{1}{2} m v^2 = k_{\mathrm{B}} T
+\end{equation}
+Misalkan terdapat $N$ partikel dan $\mathrm{d}N$ melambangkan jumlah partikel
+gas yang memiliki kecepatan antara $v$ dan $v + \mathrm{d}v$, maka fraksi partikel
+dengan kecepatan antara $v$ dan $v + \mathrm{d}v$ adalah $\frac{\mathrm{d}N}{N}$.
+
+Untuk menghitung rata-rata energi partikel kita memerlukan teori ekipartisi. Dalam teori
+ekipartisi, semua partikel bebas bergerak sepanjang sumbu $x$, $y$, dan $z$.
+Pada ekuilibrium, energi total partikel terbagi rata untuk semua derajat kebebasan
+gerakan partikel. Setiap derajat kebebasan dari partikel yang bergerak mempunyai energi
+\begin{equation*}
+E = \frac{1}{2} m v^2 = \frac{1}{2} k_{\mathbf{B}} T
+\end{equation*}
+
+Nilai ekspektasi dari energi total adalah:
+\begin{align*}
+\braket{E} & = E_{x} + E_{y} + E_{z} \\
+& = \frac{1}{2} m v_{x}^2 + \frac{1}{2} m v_{y}^2 + \frac{1}{2} m v_{z}^2 \\
+& = \frac{3}{2} k_{\mathrm{B}} T
+\end{align*}
+
+Jika partikel adalah molekul monotaomik, maka gerakan molekul yang terlibat hanya
+akibat translasi pada arah $x$, $y$, dan $z$.
+
+Jika partikel adalah molekul diatomi, maka gerakan yang terlibah adalah translasi, rotasi,
+dan vibrasi. Gerakan rotasi melibatkan momen inersia $E = \frac{1}{2} I \omega^2$
+dan gerakan vibrasi melibatkan energi $E = \frac{1}{2}kx^2$.
+
+Jika ada $N$ partikel pada temperatur $T$ maka energi total adalah
+$\braket{E} = \frac{1}{2}Nk_{\mathrm{B}}T$.
+
+Dalam teori kinetik gas, energi potensial akibat itneraksi antar partikel gas dianggap nol.
+
+Dari ekspresi energi total kita dapat menghitung kapasitas kalor spesifik sebagai:
+\begin{equation*}
+C_{v} = \frac{\mathrm{d}\braket{E}}{\mathrm{d}T} = \frac{3}{2}Nk_{B} = \frac{3}{2}R
+\end{equation*}
+yang merupakan konstanta, tidak bergantung pada temperatur.
+
+Jika partikel gas dimampatkan sehingga menjadi padatan, bagaimana $C_{v}$?
+
+Dulong dan Petit (1819) mengukur beberapa $C_{v}$ dari beberapa padatan dan hasilnya adalah
+konstan, yaitu sekitar 6 kalori/mol.derajat.
+Dalam eksperimen ini padatan diberikan kalor $Q$ sehingga suhunya naik dari $T_{1}$ ke $T_{2}$.
+Kalor jenis dapat dihitung sebagai $C_{v} = \frac{\mathrm{d}Q}{\mathrm{d}T}$.
+
+Ludwig Boltzmann pada 1870, mengusulkan teori untuk menghitung $C_{v}$ dengan asumsi:
+\begin{itemize}
+\item setiap atom terikat dengan atom lain membentuk osilator harmonik
+\item atom bervibrasi ketika mendapat kalor atau dipanaskan
+\item setiap atom memiliki energi interaksi $E_{p} = \frac{3}{2}kT$ dan
+energi kinetik $E_{k} = \frac{3}{2}kT$
+\end{itemize}
+Dengan menggunakan teori ekipartisi, nilai ekspektasi energi total adalah:
+\begin{equation*}
+\braket{E} = E_{p} + E_{k} = 3kT
+\end{equation*}
+Jika dalam padatan terdapat $N$ ataom, maka total energi adalah
+\begin{equation*}
+\braket{E} = 3NkT = 3RT
+\end{equation*}
+sehingga
+\begin{equation*}
+C_{v} = \frac{\mathrm{d}\braket{E}}{\mathrm{d}T} = 3R
+\end{equation*}
+atau 6 kalori/(mol derajat).
+
+Teori Boltzmann mendukung hasil eksperimen Dulong-Petit ($T$ tinggi).
+
+Bagaimana nilai $C_{v}$ pada T rendah?
+
+Komerling Onnes(1911) mencairkan gas Nitrogen sehingga kita dapat mencapai
+suhu 4.2 K. Berkembang eksperimen pada T rendah, termasuk pengukuran $C_v$
+pada T rendah? Hasilnya adalah XXXgrafikXXX.
+
+Albert Eisntein mengembangkan teori Boltzmann dengan asumsi
+\begin{itemize}
+\item Padatan terdiri dari $N$ atom, dipandang sebagai $3N$ atom yang direpresentasikan
+dengan $3N$ osilator harmonik yang identik dengan frekuensi yang sama, yaitu $\nu$.
+\item Osilator adalah osilator kuantum yang memiliki energi diskrit dengan energi
+rata-rata:
+\begin{equation*}
+\braket{E} = \frac{h\nu}{e^{h\nu/kT} - 1}
+\end{equation*}
+\item Osilator membentuk ensembel yang mengikuti distribusi Maxwell-Boltzmann
+\item Setiap osilator memiliki 3 derajat kebebasan sehingga energi perosilator
+adalah $3\braket{E}$.
+\end{itemize}
+
+Dari asumsi tersebut dapat dihitung energi per satu mol padatan sebagai $E = 3N_{mathrm{A}}\braket{E}$
+dengan $N_{\mathrm{A}}$ adalah bilangan Avogadro:
+\begin{equation*}
+E = 3 N_{A} \frac{h\nu}{e^{h\nu/kT} - 1}
+\end{equation*}
+Kapasitas kalor:
+\begin{align*}
+C_{v} & = \left( \frac{\partial E}{\partial T} \right)_{v} \\
+& = \frac{\partial}{\partial T}\left(
+\frac{h\nu}{e^{h\nu/kT} - 1}
+\right) \\
+& = 3N_{\mathrm{A}}h\nu
+\frac{e^{h\nu/kT} h\nu/kT^2}{(e^{h\nu/kT} - 1)^2} \\
+& = 3N_{\mathrm{A}}k \left( \frac{h\nu}{kT} \right)^2
+\frac{e^{h\nu/kT}}{(e^{h\nu/kT} - 1)^2}
+\end{align*}
+atau
+\begin{equation}
+C_{v} = 3R \left(\frac{\theta_{E}}{T}\right)^2
+\frac{e^{\theta_{E}/T}}{(e^{\theta_{E}/T} - 1)^2}
+\end{equation}
+
 \section{Model Einstein}
 
 Padatan dianggap sebagai kumpulan osilator harmonik.
