@@ -1,85 +1,170 @@
 \chapter{Model Tight Binding 1d}
 
-Asumsi:
+\section{Model monoatomik}
 
+{\centering
+\includegraphics{images_priv/Simon_Fig_11_1.pdf}
+\par}
+
+Tinjau suatu model rantai tight-binding 1d monoatomik.
+Misalkan jarak antara atom adalah $a$.
+Orbital pada atom $n$ dilambangkan dengan $\ket{n}$ untuk
+$n = 1,\ldots,N$.
+
+Asumsi:
 \begin{itemize}
 \item Terdapat satu orbital pada atom $n$, yaitu $\ket{n}$
-\item Sistem memiliki syarat batas periodik.
-\item Semua orbital saling ortogonal: $\braket{n}{m} = \delta_{nm}$
+\item Sistem memenuhi syarat batas periodik.
+\item Semua orbital saling ortogonal: $\braket{n | m} = \delta_{nm}$
 \end{itemize}
 
 Asumsikan fungsi gelombang berbentuk:
-\[
+\begin{equation*}
 \ket{\Psi} = \sum_{n} \phi_{n} \ket{n}
-\]
+\end{equation*}
 
-    Persamaan Schroedinger: \[
+Persamaan Schroedinger:
+\begin{equation*}
 \sum_{m} H_{nm} \phi_{m} = E \phi_{n}
-\] dengan elemen matriks Hamiltonian: \[
+\end{equation*}
+dengan elemen matriks Hamiltonian:
+\begin{equation*}
 H_{nm} = \bra{n}H\ket{m}
-\]
+\end{equation*}
 
-    Hamiltonian dapat dituliskan sebagai: \[
+Hamiltonian dapat dituliskan sebagai:
+\begin{equation*}
 H = K + \sum_{j} V_{j}
-\] dengan $K = \mathbf{p}^2/(2m)$ adalah energi kinetik dan $V_{j}$
+\end{equation*}
+dengan $K = \mathbf{p}^2/(2m)$ adalah energi kinetik dan $V_{j}$
 adalah interaksi Coulomb antara elektron pada posisi $\mathbf{r}$
-dengan inti atom pada situs $j$: \[
-V_{j} = V(\mathbf{r} - \mathbf{R}_{j})
-\] dengan $\mathbf{R}_{j}$ adalah posisi dari inti ke-$j$.
+dengan inti atom pada situs $j$:
+\begin{equation*}
+V_{j} = V(\mathbf{r} - \mathbf{R}_{j})    
+\end{equation*}
+dengan $\mathbf{R}_{j}$ adalah posisi dari inti ke-$j$.
 
-    Dengan definisi tersebut, kita memiliki: \[
-H\ket{m} = (K + V_{m})\ket{m} + \sum_{j \neq m} V_{j}\ket{m}
-\]
+Dengan definisi tersebut, kita memiliki:
+\begin{equation*}
+H\ket{m} = (K + V_{m})\ket{m} + \sum_{j \neq m} V_{j}\ket{m}    
+\end{equation*}
 
-    $K + V_{m}$ adalah Hamiltonian yang diperoleh jika hanya ada satu
-atom, yaitu atom ke-$m$, pada sistem: \[
-(K + V_{m})\ket{m} = \epsilon_{\mathrm{a}}\ket{m}
-\] di mana $\epsilon_{a}$ adalah energi elektron pada atom ke-$m$
+$K + V_{m}$ adalah Hamiltonian yang diperoleh jika hanya ada satu
+atom, yaitu atom ke-$m$, pada sistem:
+\begin{equation*}
+(K + V_{m})\ket{m} = \epsilon_{\mathrm{a}}\ket{m}    
+\end{equation*}
+di mana $\epsilon_{a}$ adalah energi elektron pada atom ke-$m$
 jika tidak ada atom lain.
-
-    \[
+\begin{equation*}
 H_{n,m} = \bra{n}H\ket{m} = \epsilon_{a}\delta_{n,m} + \sum_{j \neq m} \bra{n}V_{j}\ket{m}
-\]
+\end{equation*}
 
-    Suku penjumlahan potensial dapat diaproksimasi menjadi: \[
+Suku penjumlahan potensial dapat diaproksimasi menjadi:
+\begin{equation*}
 \sum_{j \neq m} \bra{n}V_{j}\ket{m} = \begin{cases}
 V_{0} & n = m \\
 -t & n = m \pm 1 \\
 0 & \text{lainnya}
 \end{cases}
-\]
+\end{equation*}
 
-    Matriks Hamiltonian menjadi: \[
+Matriks Hamiltonian menjadi:
+\begin{equation*}
 H_{nm} = \epsilon_{0}\delta_{nm} - t(\delta_{n+1,m} + \delta_{n-1,m})
-\] di mana $\epsilon_{0} = \epsilon_{a} + V_{0}$.
-
-    Parameter $t$ dikenal juga sebagai hopping term. Suku ini menjadi
+\end{equation*}
+di mana $\epsilon_{0} = \epsilon_{a} + V_{0}$.
+Parameter $\epsilon_{0}$ dikenal juga dengan nama energi \textit{on-site}.
+Sedangkan parameter $t$ dikenal juga dengan nama $hopping term$.
+Parameter ini menjadi
 besar apabila orbital semakin dekat dan turun secara eksponensial jika
 orbital semakin jauh.
 
-    Dengan menggunakan ansatz: \[
-\phi_{n}(k) = \frac{e^{-\imath k n a}}{\sqrt{N}}
-\]
+Persamaan Schroedinger yang akan diselesaikan memiliki bentuk:
+\begin{equation*}
+\sum_{m} \left[
+  \epsilon_{0}\delta_{nm} - t(\delta_{n+1,m} + \delta_{n-1,m})
+\right] \phi_{m} =
+E \phi_{n}
+\end{equation*}
+atau:
+\begin{equation*}
+\epsilon_{0} \phi_{n} - t \left( \phi_{n+1} + \phi_{n-1} \right) =
+E \phi_{n}
+\end{equation*}
 
-    Diperoleh: \[
-\sum_{m} H_{nm}\phi_{m} = \epsilon_{0}\frac{e^{-\imath k n a}}{\sqrt{N}} -
-t\left(
-\frac{e^{-\imath k (n+1) a}}{\sqrt{N}} +
-\frac{e^{-\imath k (n-1) a}}{\sqrt{N}}
-\right)
-\] dan: \[
-E\phi_{n} = E \frac{e^{-\imath k n a}}{\sqrt{N}}
-\]
-
-\[
-E \frac{e^{-\imath k n a}}{\sqrt{N}} = 
-\epsilon_{0}\frac{e^{-\imath k n a}}{\sqrt{N}} -
-t\left(
-\frac{e^{-\imath k (n+1) a}}{\sqrt{N}} +
-\frac{e^{-\imath k (n-1) a}}{\sqrt{N}}
-\right)
-\]
-
-Energi: \[
+Untuk mencari solusi dari persamaan tersebut, kita akan menggunakan ansatz:
+\begin{equation*}
+\phi_{n}(k) = e^{-\imath k n a}
+\end{equation*}
+Substitusi ansatz ke persamaan Schroedinger, diperoleh:
+\begin{equation*}
+\epsilon_{0} e^{-\imath k n a} - t\left(
+e^{-\imath k (n+1) a} + e^{-\imath k (n-1) a}
+\right) = E e^{-\imath k n a}
+\end{equation*}
+atau:
+\begin{equation*}
+E = \epsilon_{0} - t\left(
+e^{-\imath k a} + e^{\imath k a} \right)
+\end{equation*}
+Kita mendapatkan energi elektron sebagai fungsi dari vektor gelombang $k$
+\begin{equation*}
 E(k) = \epsilon_{0} - 2t\cos(ka)
-\] dispersion relation, band structure
+\end{equation*}
+Hubungan ini juga merupakan suatu hubungan dispersi yang lebih dikenal
+dengan nama struktur pita elektronik.
+
+Mirip dengan kasus vibrasi 1d, untuk sistem periodik, nilai $k$ adalah diskrit:
+\begin{equation*}
+k = \frac{2\pi p}{Na}
+\end{equation*}
+di mana $p$ adalah bilangan bulat dan $Na$ adalah panjang dari sistem.
+
+
+\section{Model TB 1d Diatomik}
+
+Sekarang kita akan meninjau sistem yang mirip dengan sebelumnya
+namun sekarang diasumsikan bahwa terdapat dua jenis atom
+pada sistem:
+\begin{equation*}
+- A - B - A - B - A - B -
+\end{equation*}
+Energi \textit{on-site} dari atom $A$ berbeda dengan atom $B$.
+Dengan menggunakan asumsi nearest-neighbor interaction, kita mendapatkan:
+\begin{align*}
+E \phi_{n}^{A} = \epsilon_{A} \phi_{n}^{A} - t \left( \phi_{n}^{B} + \phi_{n-1}^{B} \right) \\
+E \phi_{n}^{B} = \epsilon_{B} \phi_{n}^{B} - t \left( \phi_{n}^{A} + \phi_{n+1}^{A} \right) \\
+\end{align*}
+Dengan menggunakan ansatz:
+\begin{align*}
+\phi_{n}^{A} = Ae^{\imath k n a}
+\phi_{n}^{B} = Be^{\imath k n a}
+\end{align*}
+Diperoleh:
+\begin{align*}
+EA = \epsilon_{A} A - t ( 1 + e^{-\imath k a}) B \\
+EB = \epsilon_{A} B - t ( 1 + e^{-\imath k a}) A
+\end{align*}
+
+Persamaan ini adalah persamaan eigen. Nilai eigen $E$ dapat
+dicari dengan cara mencari akar dari determinan:
+\begin{equation*}
+\begin{vmatrix}
+\epsilon_{A} - E & -t(1 + e^{\imath k a}) \\
+-t(1 + e^{\imath k a}) & \epsilon_{B} - E \\
+\end{vmatrix}
+\end{equation*}
+Diperoleh persamaan sekuler:
+\begin{equation*}
+E^2 - E( \epsilon_A + \epsilon_B ) + \epsilon_{A} \epsilon_{B} -
+t^2 (1 + 1 + e^{\imath ka} + e^{-\imath ka}) = 0
+\end{equation*}
+dengan solusi:
+\begin{equation*}
+E_{\pm}(k) = \frac{1}{2}\left(
+\epsilon_{A} + \epsilon_{B} \pm \sqrt{
+(\epsilon_{A} - \epsilon_{B})^2 + 4t^2(2 + 2\cos(ka))
+}
+\right)
+\end{equation*}
