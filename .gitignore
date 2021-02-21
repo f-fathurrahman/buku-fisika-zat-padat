@@ -1,5 +1,7 @@
 FisikaZatPadat.pdf
 
+images_priv
+
 .ipynb_checkpoints
 *.data
 OUT_*

@@ -16,6 +16,8 @@
 %\usepackage{cmbright}
 %\renewcommand{\familydefault}{\sfdefault}
 
+%\usepackage{fontspec}
+
 \usepackage[libertine]{newtxmath}
 \usepackage[no-math]{fontspec}
 \setmainfont{Linux Libertine O}
@@ -80,6 +82,8 @@
 }
 \AfterEndEnvironment{example}{\end{mdframed}}
 
+\renewcommand{\imath}{\textrm{i}}
+
 \usepackage{hyperref}
 \usepackage{multicol}
 \usepackage{makeidx}
@@ -104,6 +108,7 @@
 
 \input{Ch01}
 \input{VibrasiPadatan}
+\input{TB1d}
 
 %\appendix
 %\include{PythonProg}

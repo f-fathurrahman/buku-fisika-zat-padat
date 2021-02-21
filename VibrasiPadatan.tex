@@ -2,20 +2,27 @@
 \section{Model rantai atom 1d}
 
 Tinjau suatu rantai atom 1d yang terdiri dari partikel atau atom identik
-dengan massa \(m\) dengan jarak ekuilibrium antar atom adalah \(a\)
+dengan massa $m$ dengan jarak ekuilibrium antar atom adalah $a$
 (yang juga merupakan konstanta kisi dari sistem).
 
-Posisi dari atom ke-\(n\) dinyatakan sebagai \(x_{n}\) dan posisi
-ekuilibriumnya sebagai \(x^{0}_{n} = na\).
+\begin{figure}[h]
+{\centering
+\includegraphics{images_priv/Simon_Fig_9_1}
+\par}
+\end{figure}
+
+Posisi dari atom ke-$n$ dinyatakan sebagai $x_{n}$ dan posisi
+ekuilibriumnya sebagai $x^{0}_{n} = na$.
 
 Atom akan bergerak atau bervibrasi disekitar posisi ekuilibrium dan
-definisikan \[
+definisikan
+\begin{equation*}
 \delta x_{n} = x_{n} - x^{0}_{n}
-\]
+\end{equation*}
 
 Jika sistem berada pada temperatur yang cukup rendah, kita dapat
-mengasumsikan bahwa potensial yang bekerja pada atom merupakan potensial
-harmonik, yang lambangkan dengan pegas yang menghubungkan antara atom.
+mengasumsikan bahwa potensial yang bekerja pada atom merupakan \textit{potensial
+harmonik}, yang dimodelkan dengan pegas yang menghubungkan antara atom.
 Oleh karena itu, model ini juga dikenal sebagai model rantai harmonik.
 
 Energi potensial antar atom:
@@ -26,7 +33,7 @@ x_{i+1} - x_{i} - a \right)^2 \\
 \delta x_{i+1} - \delta x_{i} \right)^2
 \end{align*}
 
-Gaya yang bekerja pada massa ke-\(n\) dari rantai atom adalah (asumsi
+Gaya yang bekerja pada massa ke-$n$ dari rantai atom adalah (asumsi
 nearest neighbor interaction):
 \begin{align*}
 F_{n} & = -\frac{\partial V_{\mathrm{tot}}}{\partial x_{n}} \\
@@ -34,7 +41,8 @@ F_{n} & = -\frac{\partial V_{\mathrm{tot}}}{\partial x_{n}} \\
 \kappa \left( \delta x_{n-1} - \delta x_{n} \right)
 \end{align*}
 
-Persamaan Newton:
+Dengan asumsi bahwa gerakan atom mengikuti mekanika klasik, kita dapat
+menuliskan persamaan Newton untuk massa ke-$n$:
 \begin{equation*}
 m \ddot{\delta x_{n}} = F_{n} = \kappa \left(
     \delta x_{n+1} + \delta x_{n-1} - 2\delta x_{n}
@@ -50,17 +58,25 @@ dengan $A$ adalah amplitudo osilasi, $k$ adalah vektor
 gelombang (bilangan gelombang), dan $\omega$ adalah frekuensi
 gelombang.
 
-Substitusi ke persamaan diferensial:
+Substitusi ke persamaan diferensial, diperoleh:
 \begin{equation*}
 -m\omega^2 A e^{\imath \omega t - \imath k n a} = 
 \kappa A e^{\imath \omega t} \left[ 
 e^{-\imath k (n+1) a} +
-e^{-\imath k (n-1) a} +
+e^{-\imath k (n-1) a} -
 2e^{-\imath k n a}
 \right]
 \end{equation*}
+atau:
+\begin{align*}
+-m\omega^2 A e^{\imath \omega t - \imath k n a} & = 
+\kappa A e^{\imath \omega t - \imath k n a} \left[ 
+e^{-\imath k a} + e^{\imath k a} - 2 \right] \\
+-m\omega^2 & = \kappa \left[ e^{-\imath k a} + e^{\imath k a} - 2 \right] \\
+-m\omega^2 & = \kappa \left[ 2\cos(ka) - 2 \right]
+\end{align*}
 
-Sederhanakan:
+Akhirnya diperoleh
 \begin{equation*}
 m\omega^2 = 2\kappa\left( 1 - \cos(ka) \right) = 4\kappa \sin^2 \left( \frac{ka}{2} \right)
 \end{equation*}
@@ -70,192 +86,172 @@ Diperoleh (hubungan dispersi):
 \omega(k) = 2\sqrt{\frac{\kappa}{m}} \left| \sin\left(\frac{ka}{2}\right) \right|
 \end{equation}
 
-$\omega(k)$: hubungan dispersi
+Hubungan seperti $\omega(k)$ dikenal dengan nama hubungan dispersi.
 
 \section{Ruang resiprokal pada 1d}
 
-Hubungan dispersi merupakan fungsi yang periodik dalam \(k\) dengan
-periode \(2\pi/a\). Hal ini merupakan prinsip umum: \emph{Suatu sistem
-yang periodik pada ruang nyata dengan periode \(a\) akan periodik pada
-ruang resiprokal dengan periode \(2\pi/a\)}
+Hubungan dispersi merupakan fungsi yang periodik dalam $k$ dengan
+periode $2\pi/a$. Hal ini merupakan prinsip umum:
 
-Unit sel pada ruang resiprokal atau ruang-\(k\) dikenal dengan nama zona
-Brillouin. Zona Brillouin pertama adalah unit sel pada ruang-\(k\) yang
-memiliki pusat pada titik \(k=0\).
+\emph{Suatu sistem
+yang periodik pada ruang nyata dengan periode $a$ akan periodik pada
+ruang resiprokal dengan periode $2\pi/a$}
 
-Titik \(k=\pm \pi/a\) dikenal sebagai batas zona Brillouin.
+Unit sel pada ruang resiprokal atau ruang-$k$ dikenal dengan nama zona
+Brillouin. Zona Brillouin pertama adalah unit sel pada ruang-$k$ yang
+memiliki pusat pada titik $k=0$. Berdasarkan konvensi, kita akan
+menggunakan
+\begin{equation}
+-\pi/a \leq k < \pi/a
+\end{equation}
+sebagai zona Brillioun pertama.
+Titik-titik $k=\pm \pi/a$ dikenal sebagai batas zona Brillouin.
 
-Brillouin zone: $-\pi/a \leq k < \pi/a$
-
-Mode vibrasi telah didefinisikan memiliki bentuk: \[
+Mode vibrasi telah didefinisikan memiliki bentuk:
+\begin{equation}
 \delta x_{n} = A e^{\imath \omega t - \imath k n a}
-\]
-
-Jika kita mengganti \(k\) dengan \(k + 2\pi/a\), diperoleh:
+\end{equation}
+Jika kita mengganti $k$ dengan $k + 2\pi/a$, diperoleh:
 \begin{align}
 \delta x_{n} & = A e^{\imath \omega t - \imath (k + 2\pi/a) n a} \\
 & = A e^{\imath \omega t - \imath k n a} e^{-\imath 2\pi n} \\
 & = A e^{\imath \omega t - \imath k n a}
 \end{align}
-
-
-Menggunakan \[
+Dengan menggunakan hubungan
+$$
 e^{-\imath 2\pi n } = \cos(2\pi n) - \sin(2\pi n) = 1
-\] untuk sembarang bilangan bulat \(n\).
-
-Kita menemukan bahwa menggeser \(k \rightarrow k + 2\pi/a\) memberikan
+$$
+untuk sembarang bilangan bulat $n$, kita menemukan bahwa
+menggeser $k \rightarrow k + 2\pi/a$ memberikan
 kembali mode osilasi awal.
 
-Secara umum menggeser bilangan gelombang \(k\) dengan
-\(k \rightarrow 2\pi p/a\), dengan merupakan bilangan bulat, akan
-memberikan kita mode vibrasi awal.
+Secara umum menggeser bilangan gelombang $k$ dengan
+$k \rightarrow 2\pi p/a$, di mana $p$ merupakan bilangan bulat
+tidak akan mengubah mode vibrasi.
 
-Kita dapat mendefinisikan himpunan titik pada ruang-\(k\) yang secara
-fisis ekuivalen dengan titik \(k=0\). Himpunan titik ini dikenal sebagai
+Kita dapat mendefinisikan himpunan titik pada ruang-$k$ yang secara
+fisis ekuivalen dengan titik $k=0$. Himpunan titik ini dikenal sebagai
 kisi resiprokal (\emph{reciprocal lattice}).
-
-Sedangkan himpunan titik \(x_{n} = na\) disebut sebagai kisi langsung
+Sedangkan himpunan titik $x_{n} = na$ disebut sebagai kisi langsung
 (\emph{direct lattice}) atau kisi ruang nyata (\emph{real space
 lattice}).
 
+Diberikan suatu vektor kisi pada ruang nyata $x_{n}$, vektor kisi resiprokal
+$G_{m}$ adalah semua vektor pada ruang resiprokal yang memenuhi hubungan:
+\begin{equation}
+e^{\imath G_{m} x_{n}} = 1
+\end{equation}
+
 Kita dapat melihat analogi antara kisi langsung dan kisi reciprokal:
-\begin{align}
+\begin{align*}
 x_{n} & = \cdots, -2a, -a, 0, a, 2a, \cdots \\
 G_{n} & = \cdots, -2\left(\frac{2\pi}{a}\right), -\left(\frac{2\pi}{a}\right), 0, \left(\frac{2\pi}{a}\right), 2\left(\frac{2\pi}{a}\right), \cdots
-\end{align}
-
-
-Secara definisi, hubungan antara kisi langsung dan kisi resiprokal
-adalah: \[
-e^{\imath G_{m} x_{n}} = 1
-\]
+\end{align*}
 
 \section{Properti dari dispersi rantai atom 1d}
 
 \subsection{Gelombang suara}
 
-\[
-k = \frac{2\pi}{\lambda}
-\]
-
-\[
-v = \frac{\omega}{k}
-\]
-
-\[
-\omega = 2 \pi f
-\]
-
-\[
-v = \lambda f
-\]
-
 Gelombang suara adalah vibrasi yang memiliki panjang gelombang yang
 besar dibandingkan dengan jarak antar atom. Pada daerah ini, kita
 menemukan bahwa hubungan dispersi yang kita hitung memiliki hubungan
 linear terhadap vektor gelombang, yaitu:
-\(\omega = v_{\mathrm{sound}} k\) dengan: \[
-v_{\mathrm{sound}} = a\sqrt{\frac{\kappa}{m}}
-\]
+$\omega = v_{\mathrm{suara}} k$ dengan
+$v_{\mathrm{suara}} = a\sqrt{\frac{\kappa}{m}}$
 
-Untuk nilai-nilai \(k\) yang lebih besar, hubungan dispersi tidak lagi
+Untuk nilai-nilai $k$ yang lebih besar, hubungan dispersi tidak lagi
 linear. Hal ini tidak sejalan dengan apa yang diasumsikan oleh Debye.
 
-Pada panjang gelombang yang pendek atau \(k\) yang besar, kita
+Pada panjang gelombang yang pendek atau $k$ yang besar, kita
 mendefinisikan dua kecepatan yang berbeda: kecepatan grup dan kecepatan
 fasa.
 
 Kecepatan grup, yaitu kecepatan pergerakan paket gelombang yang
-diberikan oleh: \[
-v_{\mathrm{group}} = \frac{\mathrm{d}\omega}{\mathrm{d}k}
-\]
+diberikan oleh:
+\begin{equation}
+v_{\mathrm{grup}} = \frac{\mathrm{d}\omega}{\mathrm{d}k}
+\end{equation}
 
 Kecepatan fasa adalah kecepatan pergerakan satu komponen frekuensi dari
-gelombang \[
-v_{\mathrm{phase}} = \frac{\omega}{k}
-\]
+gelombang
+\begin{equation}
+v_{\mathrm{fasa}} = \frac{\omega}{k}  
+\end{equation}
 
 Kedua kecepatan ini bernilai sama untuk hubungan dispersi linear, namun
 secara umum kedua kecepatan tersebut tidak sama.
 
-Kecepatan grup menjadi nol pada batas zona Brillouin, yaitu pada
-\(k = \pm \pi/a\).
+Dapat dilihat bahwa pada zona Brillouin, yaitu pada $k = \pm \pi/a$
+kecepatan grup menjadi nol.
 
-\subsection{Menghitung jumlah mode normal}
 
-Asumsikan sistem memiliki \(N\) partikel pada rantai dan asumsikan
+\subsection{Rapat keadaan}
+Asumsikan sistem memiliki $N$ partikel pada rantai dan asumsikan
 syarat batas periodik, yaitu partikel \(x_{0}\) berbatasan dengan
 \(x_{1}\) disebelah kanan dan \(x_{N-1}\) di bagian kiri, atau \[
 x_{n+N} = x_{n}
 \]
 
-Kita harus memiliki: \[
+Kita harus memiliki:
+\begin{equation}
 e^{\imath \omega t - \imath k n a} =
 e^{\imath \omega t - \imath k (N+n) a}
-\] atau \[
-e^{\imath k N a} = 1
-\]
-
-\[
+\end{equation}
+atau
+\begin{align*}
+e^{\imath k N a} = 1 \\
 cos(kNa) + \imath \sin(kNa) = 1
-\]
+\end{align*}
+artinya $\cos(kNa) = 1$ atau $\sin(kNa) = 0$.
 
-\[
-\cos(kNa) = 1
-\]
-
-\[
-\sin(kNa) = 0
-\]
-
-Persyaratan ini memberikan batasan pada nilai-nilai \(k\) yang mungkin:
-\[
-k = \frac{2\pi p}{Na} = \frac{2\pi p}{L}
-\] di mana \(p\) adalah bilangan bulat dan \(L\) adalah panjang total
+Persyaratan ini memberikan batasan pada nilai-nilai $k$ yang mungkin:
+\begin{equation}
+k = \frac{2\pi p}{Na} = \frac{2\pi p}{L}  
+\end{equation}
+di mana $p$ adalah bilangan bulat dan $L$ adalah panjang total
 dari sistem.
-
-Dengan kata lain: \(k\) menjadi terkuantisasi.
+Dengan kata lain: $k$ menjadi terkuantisasi.
 
 Sekarang, kita akan menghitung ada berapa banyak mode normal yang kita
-miliki. Karena periodisitas dari ruang-\(k\), kita hanya perlu
-memperhitungkan nilai \(k\) yang berada pada zona Brillouin pertama
-yaitu: \(-\pi/a \leq k < \pi/a\).
-
-Jumlah total mode normal adalah jangkauan nilai \(k\) dibagi dengan
-jarak antara \(k\) yang berdekatan: \[
-\text{jumlah mode normal} = \frac{2\pi/a}{2\pi/(Na)} = N
-\]
-
+miliki. Karena periodisitas dari ruang-$k$, kita hanya perlu
+memperhitungkan nilai $k$ yang berada pada zona Brillouin pertama
+yaitu: $-\pi/a \leq k < \pi/a$.
+Jumlah total mode normal adalah jangkauan nilai $k$ dibagi dengan
+jarak antara $k$ yang berdekatan:
+\begin{equation*}
+\text{jumlah mode normal} = \frac{2\pi/a}{2\pi/(Na)} = N  
+\end{equation*}
 Artinya: terdapat satu mode normal untuk tiap massa pada sistem, atau
 \emph{satu mode normal per satu derajat kebebasan pada seluruh sistem}.
 
 Debye telah memprediksikan hal ini dengan menggunakan frekuensi cutoff
 (frekuensi Debye) pada model vibrasi padatan Debye.
 
-Foton: \(\hbar \nu\), fonon: \(\hbar \omega\)
+
 
 \section{Mode Kuantum: fonon}
 
 Korespondensi kuantum: jika suatu sistem harmonik klasik memiliki mode
-osilasi normal pada frekuensi \(\omega\) maka sistem kuantum yang
-berkorespondensi akan memiliki keadaan eigen dengan energi: \[
+osilasi normal pada frekuensi $\omega$ maka sistem kuantum yang
+berkorespondensi akan memiliki keadaan eigen dengan energi:
+\begin{equation}
 E_{n} = \hbar \omega \left( n + \frac{1}{2} \right)
-\]
+\end{equation}
 
-Pada vektor gelombang \(k\) yang diberikan, terdapat banyak keadaan
-eigen yang mungkin, dengan keadaan dasar pada \(n=0\) yang hanya
+Pada vektor gelombang $k$ yang diberikan, terdapat banyak keadaan
+eigen yang mungkin, dengan keadaan dasar pada $n=0$ yang hanya
 memiliki energi titik-nol (\emph{zero point energy}) sebesar
-\(\hbar \omega(k)/2\).
+$\hbar \omega(k)/2$.
 
-Eksitasi energi terendah (\(n=1\)) memiliki energi lebih besar
-\(\hbar\omega(k)\) dibandingkan dengan keadaan dasar.
+Eksitasi energi terendah, yaitu $n=1$, memiliki energi lebih besar
+$\hbar\omega(k)$ dibandingkan dengan keadaan dasar.
 
 Secara umum, semua eksitasi pada vektor gelombang ini terjadi dalam
-satuan energi \(\hbar\omega(k)\) dan energi yang lebih tinggi
+satuan energi $\hbar\omega(k)$ dan energi yang lebih tinggi
 berkorespondensi secara klasi dengan osilasi yang memiliki amplitudo
 lebih besar.
 
-Tiap eksitasi dari mode normal ini dengan langkah \(\hbar\omega(k)\)
+Tiap eksitasi dari mode normal ini dengan langkah $\hbar\omega(k)$
 dikenal sebagai \textbf{fonon}.
 
 Fonon dapat didefinisikan sebagai kuanta vibrasi diskrit.
@@ -265,71 +261,84 @@ Sebagaimana dengan foton, kita dapat memperlakukan fonon sebagai suatu
 partikel atau sebagai gelombang terkuantisasi.
 
 Jika kita memperlakukan fonon sebagai partikel, kita dapat mempersiapkan
-banyak fonon pada satu keadaan yang sama (atau bilangan kuantum \(n\)
+banyak fonon pada satu keadaan yang sama (atau bilangan kuantum $n$
 pada persamaan energi osilator harmonik dapat memiliki sembarang nilai).
 
 Dengan kata lain fonon, seperti foton, adalah boson. Pada temperatur
 bukan nol, akan terdapat fonon yang menempati suatu mode tertentu (atau
-\(n\) secara rata-rata akan lebih besar dari 0) berdasarkan faktor
-okupansi Bose: \[
-n_{B}(\beta\hbar\omega) = \frac{1}{e^{\beta\hbar\omega} - 1}
-\] dengan \(\beta = 1/(k_{B}T)\) dan \(\omega\) adalah frekuensi osilasi
+$n$ secara rata-rata akan lebih besar dari 0) berdasarkan faktor
+okupansi Bose:
+\begin{equation*}
+n_{B}(\beta\hbar\omega) = \frac{1}{e^{\beta\hbar\omega} - 1}  
+\end{equation*}
+dengan $\beta = 1/(k_{B}T)$ dan $\omega$ adalah frekuensi osilasi
 dari mode.
 
-Nilai ekspektasi energi dari fonon pada vektor gelombang \(k\) diberikan
-oleh: \[
-E_{k} = \hbar\omega(k)\left(
-n_{B}(\beta\hbar\omega(k)) + \frac{1}{2}
-\right)
-\]
+Nilai ekspektasi energi dari fonon pada vektor gelombang $k$ diberikan
+oleh:
+\begin{equation}
+E_{k} = \hbar\omega(k)\left( n_{B}(\beta\hbar\omega(k)) + \frac{1}{2} \right)
+\end{equation}
 
 Kita dapat menggunakan persamaan ini untuk menghitung kapasitas panas
 dari model rantai atom 1d.
 
-Total energi adalah: \[
+Total energi adalah:
+\begin{equation}
 U_{\mathrm{total}} = \sum_{k} \hbar \omega(k) \left(
-n_{B}(\beta\hbar\omega(k)) + \frac{1}{2}
-\right)
-\] di mana penjumlahan terhadap \(k\) dilakukan untuk semua mode normal
-yang mungkin, yaitu \(k = 2\pi p /(Na)\) sedemikian rupa sehingga
-\(-\pi/a \leq k < \pi/a\)
+  n_{B}(\beta\hbar\omega(k)) + \frac{1}{2}
+  \right)  
+\end{equation}
+di mana penjumlahan terhadap $k$ dilakukan untuk semua mode normal
+yang mungkin, yaitu $k = 2\pi p /(Na)$ sedemikian rupa sehingga
+$-\pi/a \leq k < \pi/a$
 
 Dalam ekspresi lain:
 \begin{equation*}
 \sum_{k} \rightarrow \sum_{p = -N/2}^{(N/2)-1}  
 \end{equation*}
 
-Untuk sistem yang besar, nilai-nilai \(k\) sangat berdekatan, sehingga
+Untuk sistem yang besar, nilai-nilai $k$ sangat berdekatan, sehingga
 kita dapat mengubah tanda penjumlahan diskrit menjadi integral, sehingga
-diperoleh: \[
+diperoleh:
+\begin{equation}
 \sum_{k} \rightarrow \frac{Na}{2\pi} \int_{-\pi/a}^{\pi/a}\mathrm{d}k
-\]
+\end{equation}
 
 Kita dapat menggunakan integral ini untuk menghitung jumlah mode pada
-sistem: \[
+sistem:
+\begin{equation*}
 \frac{Na}{2\pi} \int_{-\pi/a}^{\pi/a}\mathrm{d}k = N
-\]
+\end{equation*}
 
 Dengan menggunakan bentuk integral, total energi dapat ditulis sebagai:
-\[
+\begin{equation*}
 U_{\mathrm{total}} = \frac{Na}{2\pi}
 \int_{-\pi/a}^{\pi/a} \mathrm{d}k \, \hbar \omega(k) \left(
 n_{B}(\beta\hbar\omega(k)) + \frac{1}{2}
 \right)
-\]
+\end{equation*}
 
 Persamaan ini mirip dengan apa yang digunakan oleh Debye untuk
-menghitung kapasitas kalor, \(\mathrm{d}U/\mathrm{d}T\), jika model yang
-digunakan adalah 1d. Perbedaannya adalah \(\omega(k)\) yang digunakan
-oleh Debye adalah linear: \(\omega = vk\).
+menghitung kapasitas kalor, $\mathrm{d}U/\mathrm{d}T$, jika model yang
+digunakan adalah 1d. Perbedaannya adalah $\omega(k)$ yang digunakan
+oleh Debye adalah linear: $\omega = vk$.
 
 Model Einstein untuk perhitungan kapasitas kalor juga dapat diturunkan,
-yaitu untuk kasus di mana frekuensi \(\omega\) konstan untuk seluruh
-\(k\).
+yaitu untuk kasus di mana frekuensi $\omega$ konstan untuk seluruh
+$k$.
+
 
 \section{Model Rantai Diatomik 1d}
 
 
+\begin{figure}[h]
+{\centering
+\includegraphics{images_priv/Simon_Fig_10_5.pdf}
+\par}
+\end{figure}
+
+Persamaan gerak untuk atom tipe-1 dan atom tipe-2:
 \begin{align}
 m \ddot{\delta x_{n}} = \kappa_{2} ( \delta y_{n} - \delta x_{n} ) +
 \kappa_{1} ( \delta y_{n-1} - \delta x_{n} ) \\
@@ -337,25 +346,24 @@ m \ddot{\delta y_{n}} = \kappa_{1} ( \delta x_{n+1} - \delta y_{n} ) +
 \kappa_{2} ( \delta x_{n} - \delta y_{n} )
 \end{align}
 
-
+Asumsikan solusi berbentuk sebagai berikut:
 \begin{align}
 \delta x_{n} & = A_{x} e^{\imath \omega t - \imath kna} \\
 \delta y_{n} & = A_{y} e^{\imath \omega t - \imath kna}
 \end{align}
-
-
+Substitusi ke persamaan gerak, diperoleh:
 \begin{align}
--\omega^2 m A_{x} e^{\imath \omega t - ikna} & =
-\kappa_{2} A_{y} e^{\imath \omega t - ikna} +
-\kappa_{1} A_{y} e^{\imath \omega t - ik(n-1)a} -
-(\kappa_{1} + \kappa_{2}) A_{x} e^{\imath \omega t - ikna} \\
--\omega^2 m A_{y} e^{\imath \omega t - ikna} & =
-\kappa_{1} A_{x} e^{\imath \omega t - ik(n+1)a} +
-\kappa_{2} A_{x} e^{\imath \omega t - ikna} -
-(\kappa_{1} + \kappa_{2}) A_{y} e^{\imath \omega t - ikna}
+-\omega^2 m A_{x} e^{\imath \omega t - \imath kna} & =
+\kappa_{2} A_{y} e^{\imath \omega t - \imath kna} +
+\kappa_{1} A_{y} e^{\imath \omega t - \imath k(n-1)a} -
+(\kappa_{1} + \kappa_{2}) A_{x} e^{\imath \omega t - \imath kna} \\
+-\omega^2 m A_{y} e^{\imath \omega t - \imath kna} & =
+\kappa_{1} A_{x} e^{\imath \omega t - \imath k(n+1)a} +
+\kappa_{2} A_{x} e^{\imath \omega t - \imath kna} -
+(\kappa_{1} + \kappa_{2}) A_{y} e^{\imath \omega t - \imath kna}
 \end{align}
 
-
+Setelah penyederhanaan:
 \begin{align}
 -\omega^2 m A_{x} & = \kappa_{2} A_{y} + \kappa_{1} A_{y} e^{\imath ka} -
 (\kappa_{1} + \kappa_{2})A_{x} \\
@@ -363,6 +371,7 @@ m \ddot{\delta y_{n}} = \kappa_{1} ( \delta x_{n+1} - \delta y_{n} ) +
 (\kappa_{1} + \kappa_{2})A_{y}
 \end{align}
 
+Dalam bentuk matriks:
 \begin{equation*}
 m\omega^2 \begin{bmatrix}
 A_{x} \\
@@ -378,23 +387,23 @@ A_{y}
 \end{bmatrix}    
 \end{equation*}
 
-
-Persamaan eigenvalue: \(\mathbf{A} \mathbf{x} = \lambda \mathbf{x}\)
-
-\begin{align}
+Persamaan ini memiliki solusi non-trivial apabila determinan berikut
+bernilai nol:
+\begin{align*}
 \begin{vmatrix}
 (\kappa_{1} + \kappa_{2}) - m\omega^2 & -\kappa_{2} - \kappa_{1} e^{\imath k a} \\
 (-\kappa_{2} - \kappa_{1})e^{-\imath k a} & (\kappa_{1} + \kappa_{2}) - m\omega^2
 \end{vmatrix} & = 0 \\
 \left| (\kappa_{1} + \kappa_{2}) - m\omega^2 \right|^2 -
 \left| \kappa_{2} + \kappa_{1}e^{\imath k a} \right|^2 & = 0
-\end{align}
-
+\end{align*}
+Persamaan karakteristik:
 \begin{equation*}
 m\omega^2 = (\kappa_{1} + \kappa_{2}) \pm 
 \left| \kappa_{1} + \kappa_{2} e^{\imath k a}\right|    
 \end{equation*}
 
+Suku kedua dapat ditulis menjadi:
 \begin{align}
 \left| \kappa_{1} + \kappa_{2} e^{\imath ka} \right| & = 
 \sqrt{( \kappa_{1} + \kappa_{2} e^{\imath ka} )
@@ -402,7 +411,7 @@ m\omega^2 = (\kappa_{1} + \kappa_{2}) \pm
 & = \sqrt{ \kappa_{1}^{2} + \kappa_{2}^{2} + 2\kappa_{1} \kappa_{2} \cos(ka) }
 \end{align}
 
-
+Diperoleh hubungan dispersi:
 \begin{align}
 \omega_{\pm} & = \sqrt{\frac{\kappa_{1} + \kappa_{2}}{m} \pm
 \frac{1}{m}\sqrt{ \kappa_{1}^{2} + \kappa_{2}^{2} + 2\kappa_{1} \kappa_{2} \cos(ka) }
@@ -412,16 +421,16 @@ m\omega^2 = (\kappa_{1} + \kappa_{2}) \pm
 }
 \end{align}
 
-Untuk tiap \(k\) kita mendapatkan dua mode normal, yang biasanya disebut
+Untuk tiap $k$ kita mendapatkan dua mode normal, yang biasanya disebut
 sebagai dua cabang dispersi.
 
-Karena terdapat \(N\) nilai \(k\) yang berbeda, kita mendapatkan \(2N\)
+Karena terdapat $N$ nilai $k$ yang berbeda, kita mendapatkan $2N$
 total mode. Hal ini sesuai dengan intuisi Debye bahwa untuk setiap
 derajat kebebasan pada sistem kita memiliki satu mode normal.
 
 Terdapat cabang dispersi dengan hubungan yang mendekati linear ketika
-\(k \rightarrow 0\). Cabang ini adalah mode akustik.
+$k \rightarrow 0$. Cabang ini adalah mode akustik.
 
 Cabang dispersi dengan energi yang lebih tinggi dikenal sebagai mode
 optik. Pada mode akustik, frekuensi menjadi
-\(\sqrt{2(\kappa_{1} + \kappa_{2})/m}\) pada \(k = 0\).
+$\sqrt{2(\kappa_{1} + \kappa_{2})/m}$ pada $k = 0$.

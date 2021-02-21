@@ -1,0 +1,85 @@
+\chapter{Model Tight Binding 1d}
+
+Asumsi:
+
+\begin{itemize}
+\item Terdapat satu orbital pada atom $n$, yaitu $\ket{n}$
+\item Sistem memiliki syarat batas periodik.
+\item Semua orbital saling ortogonal: $\braket{n}{m} = \delta_{nm}$
+\end{itemize}
+
+Asumsikan fungsi gelombang berbentuk:
+\[
+\ket{\Psi} = \sum_{n} \phi_{n} \ket{n}
+\]
+
+    Persamaan Schroedinger: \[
+\sum_{m} H_{nm} \phi_{m} = E \phi_{n}
+\] dengan elemen matriks Hamiltonian: \[
+H_{nm} = \bra{n}H\ket{m}
+\]
+
+    Hamiltonian dapat dituliskan sebagai: \[
+H = K + \sum_{j} V_{j}
+\] dengan $K = \mathbf{p}^2/(2m)$ adalah energi kinetik dan $V_{j}$
+adalah interaksi Coulomb antara elektron pada posisi $\mathbf{r}$
+dengan inti atom pada situs $j$: \[
+V_{j} = V(\mathbf{r} - \mathbf{R}_{j})
+\] dengan $\mathbf{R}_{j}$ adalah posisi dari inti ke-$j$.
+
+    Dengan definisi tersebut, kita memiliki: \[
+H\ket{m} = (K + V_{m})\ket{m} + \sum_{j \neq m} V_{j}\ket{m}
+\]
+
+    $K + V_{m}$ adalah Hamiltonian yang diperoleh jika hanya ada satu
+atom, yaitu atom ke-$m$, pada sistem: \[
+(K + V_{m})\ket{m} = \epsilon_{\mathrm{a}}\ket{m}
+\] di mana $\epsilon_{a}$ adalah energi elektron pada atom ke-$m$
+jika tidak ada atom lain.
+
+    \[
+H_{n,m} = \bra{n}H\ket{m} = \epsilon_{a}\delta_{n,m} + \sum_{j \neq m} \bra{n}V_{j}\ket{m}
+\]
+
+    Suku penjumlahan potensial dapat diaproksimasi menjadi: \[
+\sum_{j \neq m} \bra{n}V_{j}\ket{m} = \begin{cases}
+V_{0} & n = m \\
+-t & n = m \pm 1 \\
+0 & \text{lainnya}
+\end{cases}
+\]
+
+    Matriks Hamiltonian menjadi: \[
+H_{nm} = \epsilon_{0}\delta_{nm} - t(\delta_{n+1,m} + \delta_{n-1,m})
+\] di mana $\epsilon_{0} = \epsilon_{a} + V_{0}$.
+
+    Parameter $t$ dikenal juga sebagai hopping term. Suku ini menjadi
+besar apabila orbital semakin dekat dan turun secara eksponensial jika
+orbital semakin jauh.
+
+    Dengan menggunakan ansatz: \[
+\phi_{n}(k) = \frac{e^{-\imath k n a}}{\sqrt{N}}
+\]
+
+    Diperoleh: \[
+\sum_{m} H_{nm}\phi_{m} = \epsilon_{0}\frac{e^{-\imath k n a}}{\sqrt{N}} -
+t\left(
+\frac{e^{-\imath k (n+1) a}}{\sqrt{N}} +
+\frac{e^{-\imath k (n-1) a}}{\sqrt{N}}
+\right)
+\] dan: \[
+E\phi_{n} = E \frac{e^{-\imath k n a}}{\sqrt{N}}
+\]
+
+\[
+E \frac{e^{-\imath k n a}}{\sqrt{N}} = 
+\epsilon_{0}\frac{e^{-\imath k n a}}{\sqrt{N}} -
+t\left(
+\frac{e^{-\imath k (n+1) a}}{\sqrt{N}} +
+\frac{e^{-\imath k (n-1) a}}{\sqrt{N}}
+\right)
+\]
+
+Energi: \[
+E(k) = \epsilon_{0} - 2t\cos(ka)
+\] dispersion relation, band structure
