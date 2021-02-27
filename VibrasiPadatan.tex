@@ -1,5 +1,5 @@
 \chapter{Vibrasi Padatan}
-\section{Model rantai atom 1d}
+\section{Model rantai 1d monoatomik}
 
 Tinjau suatu rantai atom 1d yang terdiri dari partikel atau atom identik
 dengan massa $m$ dengan jarak ekuilibrium antar atom adalah $a$
@@ -329,7 +329,7 @@ yaitu untuk kasus di mana frekuensi $\omega$ konstan untuk seluruh
 $k$.
 
 
-\section{Model Rantai Diatomik 1d}
+\section{Model Rantai 1d Diatomik}
 
 
 \begin{figure}[h]
@@ -392,7 +392,7 @@ bernilai nol:
 \begin{align*}
 \begin{vmatrix}
 (\kappa_{1} + \kappa_{2}) - m\omega^2 & -\kappa_{2} - \kappa_{1} e^{\imath k a} \\
-(-\kappa_{2} - \kappa_{1})e^{-\imath k a} & (\kappa_{1} + \kappa_{2}) - m\omega^2
+-\kappa_{2} - \kappa_{1}e^{-\imath k a} & (\kappa_{1} + \kappa_{2}) - m\omega^2
 \end{vmatrix} & = 0 \\
 \left| (\kappa_{1} + \kappa_{2}) - m\omega^2 \right|^2 -
 \left| \kappa_{2} + \kappa_{1}e^{\imath k a} \right|^2 & = 0
@@ -434,3 +434,31 @@ $k \rightarrow 0$. Cabang ini adalah mode akustik.
 Cabang dispersi dengan energi yang lebih tinggi dikenal sebagai mode
 optik. Pada mode akustik, frekuensi menjadi
 $\sqrt{2(\kappa_{1} + \kappa_{2})/m}$ pada $k = 0$.
+
+\section{Rantai 1d triatomik}
+
+{\centering
+\includegraphics{images_priv/Simon_phonon_triatomic.pdf}
+\par}
+
+Tinjau suatu sistem rantai 1d dengan sel satuan yang terdiri dari 3 massa yang berbeda.
+Misalkan posisi dari masing-masing atom dilambangkan dengan $x$, $y$, dan $z$.
+Persamaan geraknya adalah:
+\begin{align*}
+m_{1} \ddot{\delta x_{n}} & = \kappa_{3}(\delta z_{n-1} -\delta x_{n}) +
+\kappa_{1}(\delta y_{n} - \delta x_{n}) \\
+m_{2} \ddot{\delta y_{n}} & = \kappa_{1}(\delta x_{n} -\delta y_{n}) +
+\kappa_{2}(\delta z_{n} - \delta y_{n}) \\
+m_{3} \ddot{\delta z_{n}} & = \kappa_{2}(\delta y_{n} -\delta z_{n}) +
+\kappa_{3}(\delta x_{n+1} - \delta z_{n})
+\end{align*}
+
+Menggunakan ansatz yang mirip dengan sebelumnya, diperoleh determinan
+berikut:
+\begin{equation*}
+\begin{vmatrix}
+\kappa_{3} + \kappa_{1} - m_{1}\omega^2 & \kappa_{1} & \kappa_{3} e^{-\imath k a} \\
+\kappa_{1} & \kappa_{1} + \kappa_{2} - m_{2}\omega^2 & \kappa_{2} \\
+\kappa_{3}e^{\imath k a} & \kappa_{2} & \kappa_{2} + \kappa_{3} - m_{3}\omega^{2}
+\end{vmatrix} = 0
+\end{equation*}
