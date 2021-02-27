@@ -138,20 +138,30 @@ E \phi_{n}^{B} = \epsilon_{B} \phi_{n}^{B} - t \left( \phi_{n}^{A} + \phi_{n+1}^
 \end{align*}
 Dengan menggunakan ansatz:
 \begin{align*}
-\phi_{n}^{A} = Ae^{\imath k n a}
+\phi_{n}^{A} = Ae^{\imath k n a} \\
 \phi_{n}^{B} = Be^{\imath k n a}
 \end{align*}
+
+\begin{equation*}
+\mathbf{A} \mathbf{x} = \lambda \mathbf{x}
+\end{equation*}
+
+\begin{equation*}
+( \mathbf{A} - \lambda \mathbf{I} ) \mathbf{x} = \mathbf{0}
+\end{equation*}
+  
+
 Diperoleh:
 \begin{align*}
 EA = \epsilon_{A} A - t ( 1 + e^{-\imath k a}) B \\
-EB = \epsilon_{A} B - t ( 1 + e^{-\imath k a}) A
+EB = \epsilon_{A} B - t ( 1 + e^{\imath k a}) A
 \end{align*}
 
 Persamaan ini adalah persamaan eigen. Nilai eigen $E$ dapat
 dicari dengan cara mencari akar dari determinan:
 \begin{equation*}
 \begin{vmatrix}
-\epsilon_{A} - E & -t(1 + e^{\imath k a}) \\
+\epsilon_{A} - E & -t(1 + e^{-\imath k a}) \\
 -t(1 + e^{\imath k a}) & \epsilon_{B} - E \\
 \end{vmatrix}
 \end{equation*}
