@@ -1,0 +1,490 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Massa efektif
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E=\frac{\hbar^{2}k^{2}}{2m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kurvatur minimum pada pita konduksi:
+\begin_inset Formula 
+\[
+E=E_{0}+\frac{\hbar^{2}k^{2}}{2m_{\mathrm{eff}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+di mana 
+\begin_inset Formula $m_{\mathrm{eff}}$
+\end_inset
+
+ adalah massa efektif yang dapat berbeda dengan massa elektron pada vakum.
+\end_layout
+
+\begin_layout Standard
+Disekitar maksimum pada pita valensi:
+\begin_inset Formula 
+\[
+E=E_{0}-\frac{\hbar^{2}k^{2}}{2m_{\mathrm{eff}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+di mana 
+\begin_inset Formula $m_{\mathrm{eff}}$
+\end_inset
+
+ adalah massa efektif lain yang bergantung pada kurvatur dari pita valensi.
+\end_layout
+
+\begin_layout Section
+Rapat keadaan
+\end_layout
+
+\begin_layout Standard
+Rapat keadaan:
+\begin_inset Formula 
+\begin{align*}
+\mathcal{D}(E)\,\mathrm{d}E & =\mathrm{d}E\frac{V}{\left(2\pi\right)^{3}}\int\left(E_{\mathbf{k}}-E\right)\ \mathrm{d}^{3}k\\
+ & =\mathrm{d}E\frac{V}{\left(2\pi\right)^{3}}\int4\pi k^{2}\delta\left(E_{\mathbf{\mathbf{k}}}-E\right)\,\mathrm{d}k
+\end{align*}
+
+\end_inset
+
+Dengan mengasumsikan bahwa 
+\begin_inset Formula $E_{\mathbf{k}}=E_{0}+\hbar^{2}k^{2}/2m$
+\end_inset
+
+ diperoleh 
+\begin_inset Formula $\mathrm{d}E_{\mathbf{k}}=\hbar^{2}k/m\:\mathrm{d}k$
+\end_inset
+
+, sehingga:
+\begin_inset Formula 
+\begin{align*}
+\mathcal{D}(E)\ \mathrm{d}E & =\mathrm{d}E\ \frac{4\pi V}{\left(2\pi\right)^{3}}\int k\frac{m}{\hbar^{2}}\delta\left(E_{\mathbf{k}}-E\right)\,\mathrm{d}E_{\mathbf{k}}\\
+ & =\mathrm{d}E\ \frac{4\pi V}{\left(2\pi\right)^{3}}\sqrt{\frac{2m(E-E_{0})}{\hbar^{2}}}\frac{m}{\hbar^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+atau:
+\begin_inset Formula 
+\[
+\mathcal{D}(E)\ \mathrm{d}E=\mathrm{d}E\ \frac{V}{2\pi^{2}}\frac{m\sqrt{2m(E-E_{0})}}{\hbar^{3}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rapat keadaan ini juga harus dikalikan dengan faktor degenerasi, misalnya
+ 2 untuk pita yang terisi oleh dua elektron.
+\end_layout
+
+\begin_layout Section
+Gas Fermi pada temperatur hingga
+\end_layout
+
+\begin_layout Standard
+Distribusi Fermi:
+\begin_inset Formula 
+\[
+f(E)=\frac{1}{e^{(E-\mu)/k_{\mathrm{B}}T}+1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Untuk 
+\begin_inset Formula $T\neq0$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{align*}
+N & =\int_{0}^{\infty}f(E)\mathcal{D}(E)\ \mathrm{d}E\\
+ & =\int_{0}^{\infty}\frac{1}{e^{(E-\mu)/k_{\mathrm{B}}T}+1}2\frac{V}{2\pi^{2}}\frac{m\sqrt{2mE}}{\hbar^{3}}\ \mathrm{d}E
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aproksimasi:
+\begin_inset Formula 
+\[
+f(E)\sim e^{-E/k_{\mathrm{B}}T}e^{\mu/k_{\mathrm{B}}T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+yang merupakan distribusi Maxwell-Boltzmann.
+ Pada temperatur yang tinggi, gas Fermi berlaku seperti gas klasik dengan
+ statistik Maxwell-Boltzmann.
+\end_layout
+
+\begin_layout Standard
+Populasi ekuilibrium dari elektron dan hole
+\end_layout
+
+\begin_layout Standard
+Jumlah elektron:
+\begin_inset Formula 
+\[
+N_{e}=\int_{E_{c}}^{\infty}f(E)\ \mathcal{D}_{c}(E)\ \mathrm{d}E
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+jumlah hole pada pita valensi:
+\begin_inset Formula 
+\[
+N_{h}=\int_{-\infty}^{E_{v}}\left(1-f(E)\right)\ \mathcal{D}_{v}(E)\ \mathrm{d}E
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sifat distribusi Fermi:
+\begin_inset Formula 
+\begin{align*}
+1-f(E) & =1-\frac{1}{e^{(E-\mu)/k_{\mathrm{B}}T}+1}\\
+ & =\frac{1}{e^{(\mu-E)/k_{\mathrm{B}}T}+1}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan asumsi 
+\begin_inset Formula $E-\mu$
+\end_inset
+
+ bernilai besar dibandingkan dengan 
+\begin_inset Formula $k_{\mathrm{B}}T$
+\end_inset
+
+ kita dapat menggunakan aproksimasi:
+\begin_inset Formula 
+\[
+f(E)=\frac{1}{e^{(E-\mu)/k_{\mathrm{B}}T}+1}\sim e^{-E/k_{\mathrm{B}}T}e^{\mu/k_{\mathrm{B}}T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Jumlah elektron dan hole, tulis dengan variabel integrasi 
+\begin_inset Formula $E'$
+\end_inset
+
+ (untuk sementara)
+\begin_inset Formula 
+\begin{align*}
+N_{e} & \approx\int_{E_{c}}^{\infty}e^{-E'/k_{\mathrm{B}}T}e^{\mu/k_{\mathrm{B}}T}\ \mathcal{D}_{c}(E')\ \mathrm{d}E'\\
+N_{h} & \approx\int_{-\infty}^{E_{v}}e^{E'/k_{\mathrm{B}}T}e^{-\mu/k_{\mathrm{B}}T}\ \mathcal{D}_{v}(E')\ \mathrm{d}E'
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ganti variabel integrasi: 
+\begin_inset Formula $E'\rightarrow E_{c}+E$
+\end_inset
+
+ dan 
+\begin_inset Formula $\mathrm{d}E'\rightarrow\mathrm{d}(E_{c}+E)=\mathrm{d}E$
+\end_inset
+
+.
+ Ketika 
+\begin_inset Formula $E'=E_{c}$
+\end_inset
+
+ maka 
+\begin_inset Formula $E=0$
+\end_inset
+
+ sehingga batas integrasi 
+\begin_inset Formula $[E_{c},\infty]$
+\end_inset
+
+ menjadi 
+\begin_inset Formula $[0,\infty]$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+N_{e}\approx\int_{0}^{\infty}e^{-(E+E_{c})/k_{\mathrm{B}}T}e^{\mu/k_{\mathrm{B}}T}\ \mathcal{D}_{c}(E+E_{c})\ \mathrm{d}E
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ganti variabel integrasi: 
+\begin_inset Formula $E'\rightarrow E_{v}-E$
+\end_inset
+
+ dan 
+\begin_inset Formula $\mathrm{d}E'\rightarrow\mathrm{d}(E_{v}-E)=\mathrm{-d}E$
+\end_inset
+
+.
+ Ketika 
+\begin_inset Formula $E'=E_{v}$
+\end_inset
+
+ maka 
+\begin_inset Formula $E=0$
+\end_inset
+
+ sehingga batas integrasi 
+\begin_inset Formula $[-\infty,E_{v}]$
+\end_inset
+
+ menjadi 
+\begin_inset Formula $[-\infty,0]$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+N_{h}\approx-\int_{-\infty}^{0}e^{(E_{v}-E)/k_{\mathrm{B}}T}e^{-\mu/k_{\mathrm{B}}T}\ \mathcal{D}_{v}(E_{v}-E)\ \mathrm{d}E=\int_{0}^{\infty}e^{-(E-E_{v})/k_{\mathrm{B}}T}e^{-\mu/k_{\mathrm{B}}T}\ \mathcal{D}_{v}(E_{v}-E)\ \mathrm{d}E
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan mengalikan jumlah elektron dan hole diperoleh:
+\begin_inset Formula 
+\[
+N_{e}N_{h}=\left(\int_{0}^{\infty}e^{-E/k_{\mathrm{B}}T}\ \mathcal{D}_{c}(E+E_{c})\ \mathrm{d}E\right)\left(\int_{0}^{\infty}e^{-E/k_{\mathrm{B}}T}\ \mathcal{D}_{v}(E_{v}-E)\ \mathrm{d}E\right)e^{-(E_{c}-E_{v})/k_{\mathrm{B}}T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dengan mendefinisikan 
+\begin_inset Formula $E_{g}\equiv E_{c}-E_{v}$
+\end_inset
+
+ adalah celah pita dan:
+\begin_inset Formula 
+\begin{align*}
+N_{Q}^{(e)} & \equiv\int_{0}^{\infty}e^{-E/k_{\mathrm{B}}T}\ \mathcal{D}_{c}(E+E_{c})\ \mathrm{d}E\\
+N_{Q}^{(h)} & \equiv\int_{0}^{\infty}e^{-E/k_{\mathrm{B}}T}\ \mathcal{D}_{v}(E_{v}-E)\ \mathrm{d}E
+\end{align*}
+
+\end_inset
+
+yang sering juga dikenal sebagai rapat keadaan efektif kita mendapatkan
+\begin_inset Formula 
+\[
+N_{e}N_{h}=N_{Q}^{(e)}N_{Q}^{(h)}e^{-E_{g}/k_{\mathrm{B}}T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Karena setiap elektron bebas berasal dari proses pembuatan satu hole, maka
+ 
+\begin_inset Formula $N_{h}=N_{e}$
+\end_inset
+
+ sehingga:
+\begin_inset Formula 
+\[
+\left(N_{e}\right)^{2}=N_{Q}^{(e)}N_{Q}^{(h)}e^{-E_{g}/k_{\mathrm{B}}T}
+\]
+
+\end_inset
+
+atau:
+\begin_inset Formula 
+\[
+N_{e}=\sqrt{N_{Q}^{(e)}N_{Q}^{(h)}}e^{-E_{g}/2k_{\mathrm{B}}T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Jika
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\end_body
+\end_document
