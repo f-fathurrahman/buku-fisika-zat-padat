@@ -1,0 +1,158 @@
+\chapter{Elektron pada Padatan}
+
+\subsection{Nearly-free electron model}
+
+Tinjau elektron bebas dengan Hamiltonian:
+\begin{equation}
+H_{0} = \frac{\mathbf{p}^2}{2m}
+\end{equation}
+Keadaan eigen adalah gelombang bidang $\mathbf{k}$ dengan energi eigen
+\begin{equation}
+\epsilon_{0}(\mathbf{k}) = \frac{\hbar^2 \mathbf{k}^2}{2m}
+\end{equation}
+
+Anggap sekarang Hamiltonian diberikan potensial perturbasi periodik:
+\begin{equation}
+H = H_{0} + V(\mathbf{r})
+\end{equation}
+Potensial $V$ adalah periodik dengan periode $\mathbf{R}$:
+\begin{equation}
+V(\mathbf{r}) = V(\mathbf{r} + \mathbf{R})
+\end{equation}
+Elemen matriks untuk potensial ini adalah:
+\begin{equation}
+\braket{\mathbf{k}' | V | \mathbf{k} } =
+\frac{1}{L^3} \int \mathrm{d}\mathbf{r}\, e^{\imath(\mathbf{k} - \mathbf{k}')\cdot
+\mathbf{r}} \, V(\mathbf{r}) \equiv V_{\mathbf{k}' - \mathbf{k}}
+\end{equation}
+Integral ini akan bernilai nol, kecuali jika $\mathbf{k}' - \mathbf{k}$ adalah
+vektor kisi resiprokal.
+
+Kita akan menggunakan teori perturbasi untuk mencari pengaruh perturbasi terhadap
+energi eigen.
+Untuk koreksi orde-1 kita mendapatkan:
+\begin{equation}
+\epsilon_{k} = \epsilon_{0}(\mathbf{k}) + 
+\braket{\mathbf{k} | V | \mathbf{k} } =
+\epsilon_{0}(\mathbf{k}) + V_{0}
+\end{equation}
+Hal ini berarti energi eigen hanya digeser dengan suatu energi konstan.
+Konstanta ini akan diasumsikan bernilai 0.
+
+Menggunakan koreksi orde-2 diperoleh:
+\begin{equation}
+\epsilon(\mathbf{k}) = \epsilon_{0}(\mathbf{k}) +
+\sum_{\mathbf{k}' = \mathbf{k} + \mathbf{G}}
+\frac{\braket{\mathbf{k}' | V | \mathbf{k}}}
+{\epsilon_{0}(\mathbf{k}) - \epsilon_{0}(\mathbf{k}')}
+\end{equation}
+di mana pada penjumlahan kita mensyaratkan $\mathbf{G} \neq \mathbf{0}$.
+Kita perlu hati-hati dalam menggunakan koreksi ini, karena untuk beberapa
+$\mathbf{k}'$ bisa jadi kita nilai $\epsilon_{0}(\mathbf{k})$
+sangat dekat atau sama dengan $\epsilon_{0}(\mathbf{k}')$, atau keadaan degenerasi.
+Situasi ini biasanya terjadi pada batas zona Brillouin. Untuk mengatasi hal ini
+kita perlu menggunakan teori pertubasi untuk keadaan degenerate.
+
+Jika dua gelombang bidang, misalkan $\ket{\mathbf{k}}$ dan
+$\ket{\mathbf{k}'} = \ket{\mathbf{k} + \mathbf{G}}$
+memiliki energi yang sama, maka kita harus mendiagonalisasi elemen matriks
+dari keadaan tersebut.
+Elemen matriks dari dua gelombang bidang tersebut adalah:
+\begin{align*}
+\braket{\mathbf{k} | H | \mathbf{k}} & = \epsilon_{0}(\mathbf{k}) \\
+\braket{\mathbf{k}' | H | \mathbf{k}'} & = \epsilon_{0}(\mathbf{k}') =
+\epsilon_{0}(\mathbf{k} + \mathbf{G}) \\
+\braket{\mathbf{k} | H | \mathbf{k}'} & = V_{\mathbf{k}-\mathbf{k}'} =
+V^{*}_{\mathbf{G}} \\
+\braket{\mathbf{k}' | H | \mathbf{k}} & = V_{\mathbf{k}'-\mathbf{k}} =
+V_{\mathbf{G}}
+\end{align*}
+
+Pada ruang dua dimensi ini, kita dapat menuliskan fungsi gelombang sebagai:
+\begin{equation}
+\ket{\Psi} = \alpha \ket{\mathbf{k}} + \beta \ket{\mathbf{k}'} =
+\alpha \ket{\mathbf{k}} + \beta \ket{\mathbf{k} + \mathbf{G}}
+\end{equation}
+Dengan menggunakan prinsip variasi, kita mendapatkan persamaan Schroedinger efektif
+sebagai berikut.
+\begin{equation}
+\begin{bmatrix}
+\epsilon_{0}(\mathbf{k}) & V_{\mathbf{G}}^{*} \\
+V_{\mathbf{G}} & \epsilon_{0}(\mathbf{k} + \mathbf{G})
+\end{bmatrix}
+\begin{bmatrix} \alpha \\ \beta \end{bmatrix} =
+E \begin{bmatrix} \alpha \\ \beta \end{bmatrix}
+\end{equation}
+atau persamaan karakteristik
+\begin{equation}
+\left( \epsilon_{0}(\mathbf{k}) - E \right)
+\left( \epsilon_{0}(\mathbf{k} + \mathbf{G}) - E \right) - 
+V_{\mathbf{G}}^{2} = 0
+\end{equation}
+
+Untuk kasus $\mathbf{k}$ tepat berada pada batas zona Brillouin, kita
+memiliki $\epsilon_{0}(\mathbf{k}) = \epsilon_{0}(\mathbf{k} + \mathbf{G})$
+dan persamaan karakteristik:
+\begin{equation}
+\left( \epsilon_{0}(\mathbf{k}) - E \right)^2 = V_{\mathbf{G}}^2
+\end{equation}
+atau:
+\begin{equation}
+E_{\pm} = \epsilon_{0} \pm V_{\mathbf{G}}
+\end{equation}
+Kita mendapatkan bahwa terdapat gap pada batas zona Brillouin.
+
+Kita sekarang akan meninjau untuk kasus di mana $\mathbf{k}$
+berada di sekitar zona Brillouin.
+Untuk memudahkan perhitungan, kita akan fokus pada sistem 1d.
+Untuk kasus ini batas zona Brillouin adalah
+$k = \pm \pi/a$, dan
+$G = \pm 2\pi n /a$.
+Tinjau $k = n\pi/a + \delta$ dan $k = -n\pi/a + \delta$.
+Substitusi ke persamaan karakteristik sehingga kita memperoleh:
+\begin{equation}
+\left( \frac{\hbar^2}{2m}\left[ (n\pi/a)^2 + \delta^2 \right] - E \right)^2 =
+\left( \frac{\hbar^2}{2m} 2n\pi\delta/a \right)^2 + V_{\mathbf{G}}^2
+\end{equation}
+dan solusi:
+\begin{equation}
+E_{\pm} = \frac{\hbar^2}{2m} \left[ (n\pi/a)^2 + \delta^2 \right] \pm
+\sqrt{\left( \frac{\hbar^2}{2m} 2n\pi\delta/a \right)^2 + V_{\mathbf{G}}^2}
+\end{equation}
+Untuk nilai $\delta$ yang kecil, kita memperoleh:
+\begin{equation}
+E_{\pm} = \frac{\hbar^2}{2m} (n\pi/a)^2 \pm |V_{\mathbf{G}}| +
+\frac{\hbar^2 \delta^2}{2m} \left[
+1 \pm \frac{\hbar^2 (n\pi/a)^2}{m} \frac{1}{|V_{\mathbf{G}}|}
+\right]
+\end{equation}
+Artinya: di sekitar celah pita pada zona Brillouin hubungan dispersi bersifat kuadratik
+dalam $\delta$.
+
+{\centering
+\includegraphics[scale=1.5]{images_priv/Simon_Fig_15_3.pdf}
+\par}
+
+\section{Teorema Bloch}
+
+Keadaan eigen dari suatu elektron pada potensial periodik memiliki
+bentuk sebagai berikut:
+\begin{equation}
+\Psi^{\alpha}_{\mathbf{k}}(\mathbf{r}) = e^{\imath \mathbf{k} \cdot \mathbf{r} }
+u^{\alpha}_{\mathbf{k}}(\mathbf{r})
+\end{equation}
+di mana $u^{\alpha}_{\mathbf{k}}(\mathbf{k})$ adalah fungsi yang memiliki periodisitas
+sama dengan potensial dan sel satuan.
+$\alpha$ adalah indeks dari keadaan pada masing-masing $\mathbf{k}$.
+
+Kita dapat menggunakan ekspansi dengan basis gelombang bidang pada untuk
+$u^{\alpha}_{\mathbf{k}}$:
+\begin{equation}
+u^{\alpha}_{\mathbf{k}}(\mathbf{r}) = \sum_{\mathbf{G}}
+\tilde{u}^{\alpha}_{\mathbf{G},\mathbf{k}} e^{\imath \mathbf{G} \cdot \mathbf{r}}
+\end{equation}
+sehingga
+\begin{equation}
+\Psi^{\alpha}_{\mathbf{k}}(\mathbf{r}) = \sum_{\mathbf{G}}
+\tilde{u}^{\alpha}_{\mathbf{G},\mathbf{k}} e^{\imath (\mathbf{G} + \mathbf{k}) \cdot \mathbf{r}}
+\end{equation}
