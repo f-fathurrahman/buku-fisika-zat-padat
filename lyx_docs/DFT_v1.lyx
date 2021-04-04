@@ -1,0 +1,960 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{babel}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding iso8859-15
+\fontencoding T1
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section*
+Interaksi Coulomb
+\end_layout
+
+\begin_layout Standard
+Persamaan simbolik atau konseptual
+\begin_inset Formula 
+\[
+\mathrm{material=elektron+nuklei}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Interaksi antara dua elektron yang terpisah dengan jarak 
+\begin_inset Formula $d_{ee}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+E_{ee}=\frac{e^{2}}{4\pi\epsilon_{0}d_{ee}}
+\]
+
+\end_inset
+
+Interaksi antara elektron dan inti atom dengan nomor atom 
+\begin_inset Formula $Z$
+\end_inset
+
+ yang terpisah dengan jarak 
+\begin_inset Formula $d_{en}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+E_{en}=-\frac{Ze^{2}}{4\pi\epsilon_{0}d_{en}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Persamaan Schroedinger banyak-partikel
+\end_layout
+
+\begin_layout Standard
+Persamaan satu-partikel, untuk orbital atau fungsi satu-elektron 
+\begin_inset Formula $\psi(\mathbf{r})$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\frac{\mathbf{p}^{2}}{2m}+V(\mathbf{r})\right]\psi(\mathbf{r)=E\psi(\mathbf{r})}
+\]
+
+\end_inset
+
+dengan 
+\begin_inset Formula $m$
+\end_inset
+
+ adalah massa elektron dan 
+\begin_inset Formula $V(\mathbf{r})$
+\end_inset
+
+ adalah potensial eksternal.
+\end_layout
+
+\begin_layout Standard
+Persamaan Schroedinger banyak-partikel:
+\begin_inset Formula 
+\[
+\left[-\sum_{i}\frac{\hbar^{2}}{2m}\nabla_{i}^{2}-\sum_{I}\frac{\hbar^{2}}{2M_{I}}\nabla_{I}^{2}+\frac{1}{2}\sum_{i\neq j}\frac{e^{2}}{4\pi\epsilon_{0}}\frac{1}{\left|\mathbf{r}_{i}-\mathbf{r}_{j}\right|}+\frac{1}{2}\sum_{I\neq J}\frac{e^{2}}{4\pi\epsilon_{0}}\frac{Z_{I}Z_{J}}{\left|\mathbf{R}_{i}-\mathbf{R}_{j}\right|}-\sum_{i,I}\frac{e^{2}}{4\pi\epsilon_{0}}\frac{Z_{I}}{\left|\mathbf{r}_{i}-\mathbf{R}_{j}\right|}\right]\Psi=E_{\mathrm{tot}}\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fungsi gelombang banyak partikel
+\end_layout
+
+\begin_layout Standard
+Fungsi gelombang sebagai fungsi dari koordinat elektron dan koordinat inti
+ atom:
+\begin_inset Formula 
+\[
+\Psi\equiv\Psi\left(\mathbf{r}_{1},\mathbf{r}_{2},\ldots,\mathbf{r}_{N};\mathbf{R}_{1},\mathbf{R}_{2},\ldots,\mathbf{R}_{M}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left|\Psi\left(\mathbf{r}_{1},\mathbf{r}_{2},\ldots,\mathbf{r}_{N};\mathbf{R}_{1},\mathbf{R}_{2},\ldots,\mathbf{R}_{M}\right)\right|^{2}$
+\end_inset
+
+ menyatakan probabilitas untuk menemukan elektron nomor 1 pada titik 
+\begin_inset Formula $\mathbf{r}_{1}$
+\end_inset
+
+, elektron nomor 2 pada titik 
+\begin_inset Formula $\mathbf{r}_{2}$
+\end_inset
+
+, dst.
+\end_layout
+
+\begin_layout Standard
+Dalam banyak aplikasi, kita hanya tertarik pada kerapatan elektron total
+ yang didefinisikan sebagai probabilitas untuk menemukan sembarang elektron
+ (tidak bergantung pada labelnya) pada posisi 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The probability 
+\begin_inset Formula $P(\mathbf{r}_{1}=\mathbf{r})$
+\end_inset
+
+ of finding electron number 1 at r, while the other electrons can be anywhere,
+ is the ‘logical OR’ combination of all the configurations where r 1 = r
+ and r 2 , .
+ .
+ .
+ , R M , span the entire volume of the material:
+\begin_inset Formula 
+\[
+P(\mathbf{r}_{1}=\mathbf{r})=\int\left|\Psi\left(\mathbf{r},\mathbf{r}_{2},\ldots,\mathbf{r}_{N};\mathbf{R}_{1},\mathbf{R}_{2},\ldots,\mathbf{R}_{M}\right)\right|^{2}\ \mathrm{d}\mathbf{r}_{2}\ldots\mathrm{d}\mathbf{r}_{N}\mathrm{d}\mathbf{R}_{1}\ldots\mathrm{d}\mathbf{R}_{M}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sehingga:
+\begin_inset Formula 
+\[
+n(\mathbf{r})=P(\mathbf{r}_{1}=\mathbf{r})+P(\mathbf{r}_{2}=\mathbf{r})+\cdots+P(\mathbf{r}_{N}=\mathbf{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Satuan atomik
+\end_layout
+
+\begin_layout Standard
+Atomic units:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Simbol
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nilai
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Keterangan
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\hbar$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.05457163\text{\times}10^{-34}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathrm{J\cdot s}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+konstanta Planck
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $9.10938291\times10^{-31}$
+\end_inset
+
+ kg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+massa elektron
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m_{p}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.67262164\times10^{-27}$
+\end_inset
+
+ kg
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+massa proton
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1.60217649\times10^{-19}$
+\end_inset
+
+ C
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+muatan elektron
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\epsilon_{0}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $8.85418782\times10^{-12}$
+\end_inset
+
+
+\begin_inset Formula $\mathrm{F/m}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+permitivitas
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energi Hartree:
+\begin_inset Formula 
+\[
+E_{\mathrm{Ha}}=\frac{e^{2}}{4\pi\epsilon_{0}a_{0}}
+\]
+
+\end_inset
+
+dengan 
+\begin_inset Formula $a_{0}\approx0.529\ \mathrm{\AA}$
+\end_inset
+
+ adalah radius Bohr.
+\end_layout
+
+\begin_layout Standard
+Satuan energi: 
+\begin_inset Formula $1\ \mathrm{Ha}=27.2114\ \mathrm{eV}=4.3592\times10^{-18}\ \mathrm{J}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Satuan panjang: 1 bohr = 
+\begin_inset Formula $0.529177\ \mathrm{\AA}=0.529177\times10^{-10}\ \mathrm{m}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Satuan massa: 
+\begin_inset Formula $1\ \mathrm{au}$
+\end_inset
+
+ massa = 
+\begin_inset Formula $9.10938291\times10^{-31}\ \mathrm{kg}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Persamaan Schroedinger banyak-partikel:
+\begin_inset Formula 
+\[
+\left[-\sum_{i}\frac{1}{2}\nabla_{i}^{2}-\sum_{I}\frac{1}{2M_{I}}\nabla_{I}^{2}+\frac{1}{2}\sum_{i\neq j}\frac{1}{\left|\mathbf{r}_{i}-\mathbf{r}_{j}\right|}+\frac{1}{2}\sum_{I\neq J}\frac{Z_{I}Z_{J}}{\left|\mathbf{R}_{i}-\mathbf{R}_{j}\right|}-\sum_{i,I}\frac{Z_{I}}{\left|\mathbf{r}_{i}-\mathbf{R}_{j}\right|}\right]\Psi=E_{\mathrm{tot}}\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Clamped nuclei approximation
+\end_layout
+
+\begin_layout Standard
+Asumsikan inti atom tidak bergerak, dijaga tetap pada posisi yang sudah
+ diketahui.
+ Energi kinetik inti atom diabaikan dan interaksi Coulomb antara inti atom
+ yang berbeda berupa konstanta.
+ Dengan definisi:
+\begin_inset Formula 
+\[
+E=E_{\mathrm{tot}}-\frac{1}{2}\sum_{I\neq J}\frac{Z_{I}Z_{J}}{\left|\mathbf{R}_{I}-\mathbf{\mathbf{R}_{J}}\right|}
+\]
+
+\end_inset
+
+Persamaan Schroedinger banyak partikel dapat ditulis menjadi
+\begin_inset Formula 
+\[
+\left[-\frac{1}{2}\sum_{i}\frac{\nabla_{i}^{2}}{2}-\sum_{i,I}\frac{Z_{I}}{\left|\mathbf{r}_{i}-\mathbf{R}_{I}\right|}+\frac{1}{2}\sum_{i\neq j}\frac{1}{\left|\mathbf{r}_{i}-\mathbf{r}_{j}\right|}\right]\Psi=E\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan definisi
+\begin_inset Formula 
+\[
+V_{n}(\mathbf{r})\equiv-\sum_{I}\frac{Z_{I}}{\left|\mathbf{r}-\mathbf{R}_{I}\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kita mendapatkan:
+\begin_inset Formula 
+\[
+\left[-\frac{1}{2}\sum_{i}\frac{\nabla_{i}^{2}}{2}+\sum_{i}V_{n}(\mathbf{r}_{i})+\frac{1}{2}\sum_{i\neq j}\frac{1}{\left|\mathbf{r}_{i}-\mathbf{r}_{j}\right|}\right]\Psi=E\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definisikan Hamiltonian banyak-elektron (many-electron Hamiltonian):
+\begin_inset Formula 
+\[
+\hat{H}\left(\mathbf{r}_{1},\ldots\mathbf{r}_{N}\right)\equiv-\frac{1}{2}\sum_{i}\frac{\nabla_{i}^{2}}{2}+\sum_{i}V_{n}(\mathbf{r}_{i})+\frac{1}{2}\sum_{i\neq j}\frac{1}{\left|\mathbf{r}_{i}-\mathbf{r}_{j}\right|}
+\]
+
+\end_inset
+
+dapat dituliskan:
+\begin_inset Formula 
+\[
+\hat{H}\Psi=E\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hamiltonian elektron-tunggal (single-elektron Hamiltonian):
+\begin_inset Formula 
+\[
+\hat{H}_{0}(\mathbf{r})\equiv-\frac{1}{2}\nabla^{2}+V_{n}(\mathbf{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\hat{H}\left(\mathbf{r}_{1},\ldots\mathbf{r}_{N}\right)\equiv\sum_{i}\hat{H}_{0}(\mathbf{r}_{i})+\frac{1}{2}\sum_{i\neq j}\frac{1}{\left|\mathbf{r}_{i}-\mathbf{r}_{j}\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Aproksimasi elektron bebas
+\end_layout
+
+\begin_layout Standard
+Abaikan interaksi Coulomb antara elektron-elektron:
+\begin_inset Formula 
+\[
+\sum_{i}\hat{H}_{0}(\mathbf{r}_{i})\Psi=E\Psi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Fungsi gelombang banyak-elektron dapat diaproksimasi menjadi hasil kali
+ dari fungsi gelombang satu-elektron atau orbital:
+\begin_inset Formula 
+\[
+\Psi(\mathbf{r}_{1},\ldots,\mathbf{r}_{N})=\phi_{1}(\mathbf{r}_{1})\cdots\phi_{N}(\mathbf{r}_{N})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Orbital diperoleh sebagai solusi dari persamaan Schroedinger satu-elektron:
+\begin_inset Formula 
+\[
+\hat{H}_{0}(\mathbf{r})\phi_{i}(\mathbf{r})=\varepsilon_{i}\phi_{i}(\mathbf{r})
+\]
+
+\end_inset
+
+dengan 
+\begin_inset Formula $\varepsilon_{1}$
+\end_inset
+
+ adalah nilai eigen terkecil dan 
+\begin_inset Formula $\varepsilon_{1}<\varepsilon_{2}<\cdots<\varepsilon_{N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Substitusi:
+\begin_inset Formula 
+\[
+\left[\sum_{i}\hat{H}_{0}(\mathbf{r}_{i})\right]\phi_{1}(\mathbf{r}_{1})\cdots\phi_{N}(\mathbf{r}_{N})=E\phi_{1}(\mathbf{r}_{1})\cdots\phi_{N}(\mathbf{r}_{N})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dengan mengingat bahwa 
+\begin_inset Formula $\hat{H}_{0}$
+\end_inset
+
+ adalah Hamiltonian elektron-tunggal: 
+\begin_inset Formula $\hat{H}_{0}(\mathbf{r}_{1})$
+\end_inset
+
+ hanya bekerja pada fungsi 
+\begin_inset Formula $\phi_{1}(\mathbf{r}_{1})$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{H}_{0}(\mathbf{r}_{2})$
+\end_inset
+
+ hanya bekerja pada fungsi 
+\begin_inset Formula $\phi_{2}(\mathbf{r}_{2})$
+\end_inset
+
+, kita dapat menuliskan:
+\begin_inset Formula 
+\begin{align*}
+\left[\hat{H}_{0}(\mathbf{r}_{1})\phi_{1}(\mathbf{r}_{1})\right]\phi_{2}(\mathbf{r}_{2})\cdots\phi_{N}(\mathbf{r}_{N}) & +\\
+\phi_{1}(\mathbf{r}_{1})\left[\hat{H}_{0}(\mathbf{r}_{2})\phi_{2}(\mathbf{r}_{2})\right]\cdots\phi_{N}(\mathbf{r}_{N}) & +\cdots=\\
+E\phi_{1}(\mathbf{r}_{1})\cdots\phi_{N}(\mathbf{r}_{N})
+\end{align*}
+
+\end_inset
+
+Sehingga diperoleh:
+\begin_inset Formula 
+\[
+E=\varepsilon_{1}+\varepsilon_{2}+\cdots+\varepsilon_{N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kerapatan elektron:
+\begin_inset Formula 
+\[
+n(\mathbf{r})=\sum_{i}\left|\phi_{i}(\mathbf{r})\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Prinsip ekslusi Pauli, determinan Slater
+\end_layout
+
+\begin_layout Standard
+Untuk dua elektron:
+\begin_inset Formula 
+\[
+\Psi(\mathbf{r}_{1},\mathbf{r}_{2})=\frac{1}{\sqrt{2}}\left[\phi_{1}(\mathbf{r}_{1})\phi_{2}(\mathbf{r}_{2})-\phi_{1}(\mathbf{r}_{2})\phi_{2}(\mathbf{r}_{1})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tukar posisi 
+\begin_inset Formula $\mathbf{r}_{1}$
+\end_inset
+
+ dan 
+\begin_inset Formula $\mathbf{r}_{2}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\Psi(\mathbf{r}_{2},\mathbf{r}_{1})=\frac{1}{\sqrt{2}}\left[\phi_{1}(\mathbf{r}_{2})\phi_{2}(\mathbf{r}_{1})-\phi_{1}(\mathbf{r}_{1})\phi_{2}(\mathbf{r}_{2})\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sehingga: 
+\begin_inset Formula 
+\[
+\Psi(\mathbf{r}_{1},\mathbf{r}_{2})=-\Psi(\mathbf{r}_{2},\mathbf{r}_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Determinan Slater:
+\begin_inset Formula 
+\[
+\Psi(\mathbf{r}_{1},\mathbf{r}_{2})=\frac{1}{\sqrt{2}}\begin{vmatrix}\phi_{1}(\mathbf{r}_{1}) & \phi_{1}(\mathbf{r}_{2})\\
+\phi_{2}(\mathbf{r}_{1}) & \phi_{2}(\mathbf{r}_{2})
+\end{vmatrix}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Aproksimasi medan rata-rata
+\end_layout
+
+\begin_layout Standard
+Mean field approximation, metode Hartree.
+\end_layout
+
+\begin_layout Standard
+Persamaan:
+\begin_inset Formula 
+\[
+\nabla^{2}\varphi(\boldsymbol{r})=4\pi n(\boldsymbol{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dalam satuan Hartree: 
+\begin_inset Formula $\varphi(\boldsymbol{r})=-V_{H}(\mathbf{r)}$
+\end_inset
+
+, yang dikenal sebagai potensial Hartree:
+\begin_inset Formula 
+\[
+\nabla^{2}V_{H}(\mathbf{r})=-4\pi n(\mathbf{r)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solusi formal (bentuk integral):
+\begin_inset Formula 
+\[
+V_{H}(\mathbf{r})=\int\frac{n(\boldsymbol{r}')}{\left|\mathbf{r}-\mathbf{r'}\right|}\ \mathrm{d}\mathbf{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tambahkan pada persamaan elektron bebas:
+\begin_inset Formula 
+\[
+\left[-\frac{\nabla^{2}}{2}+V_{n}(\mathbf{r})+V_{H}(\mathbf{r})\right]\phi_{i}(\mathbf{r})=\varepsilon_{i}\phi_{i}(\mathbf{r})
+\]
+
+\end_inset
+
+dengan kerapatan elektron:
+\begin_inset Formula 
+\[
+n(\boldsymbol{r})=\sum_{i}\left|\phi_{i}(\mathbf{r})\right|^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dan potensial Hartree:
+\begin_inset Formula 
+\[
+\nabla^{2}V_{H}(\mathbf{r})=-4\pi n(\mathbf{r)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Persamaan Hartree-Fock
+\end_layout
+
+\begin_layout Standard
+Substitusi determinan Slater pada persamaan Schroedinger satu-elektron:
+\begin_inset Formula 
+\[
+\left[-\frac{\nabla^{2}}{2}+V_{n}(\mathbf{r})+V_{H}(\mathbf{r})\right]\phi_{i}(\mathbf{r})+\int\mathrm{d}\mathbf{r}\ V_{X}(\mathbf{r},\mathbf{r}')\phi_{i}(\mathbf{r}')=\varepsilon_{i}\phi_{i}(\mathbf{r})
+\]
+
+\end_inset
+
+dengan potensial nonlokal
+\begin_inset Formula 
+\[
+V_{X}(\mathbf{r},\mathbf{r}')=-\sum_{j}\frac{\phi_{j}^{*}(\mathbf{r}')\phi_{j}(\mathbf{r})}{\left|\mathbf{r}-\mathbf{r}'\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Persamaan Kohn-Sham
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[-\frac{\nabla^{2}}{2}+V_{n}(\mathbf{r})+V_{H}(\mathbf{r})+V_{x}(\mathbf{r})+V_{c}(\mathbf{r})\right]\phi_{i}(\mathbf{r})=\varepsilon_{i}\phi_{i}(\mathbf{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+boxed:
+\begin_inset Formula 
+\[
+\boxed{\left[-\frac{\nabla^{2}}{2}+V_{n}(\mathbf{r})+V_{H}(\mathbf{r})+V_{x}(\mathbf{r})+V_{c}(\mathbf{r})\right]\phi_{i}(\mathbf{r})=\varepsilon_{i}\phi_{i}(\mathbf{r})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\end_body
+\end_document
