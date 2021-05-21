@@ -1,0 +1,162 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{babel}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding iso8859-15
+\fontencoding T1
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Model Kronig-Penney
+\end_layout
+
+\begin_layout Standard
+Asumsikan solusi berbentuk:
+\begin_inset Formula 
+\begin{align*}
+\psi_{1}(x) & =A_{1}e^{\mathrm{i}Kx}+B_{1}e^{-\mathrm{i}Kx},\ \ \ 0<x<a\\
+\psi_{2}(x) & =A_{2}e^{\mathrm{i}\kappa x}+B_{2}e^{-\mathrm{i}\kappa x},\ \ \ -b<x<0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Karena sistem periodik:
+\begin_inset Formula 
+\[
+\psi_{3}(x)=\psi_{2}(x-a-b)e^{\mathrm{i}k(a+b)}
+\]
+
+\end_inset
+
+di mana 
+\begin_inset Formula $e^{\mathrm{i}kX}$
+\end_inset
+
+ adalah faktor fasa, 
+\begin_inset Formula $k$
+\end_inset
+
+ adalah konstanta dan 
+\begin_inset Formula $X$
+\end_inset
+
+ adalah posisi sel.
+\end_layout
+
+\begin_layout Standard
+Syarat batas:
+\begin_inset Formula 
+\begin{align*}
+\psi_{1}(0) & =\psi_{2}(0)\\
+\psi_{1}(a) & =\psi_{3}(a)\\
+\left.\frac{\mathrm{d}\psi_{1}}{\mathrm{d}x}\right|_{x=0} & =\left.\frac{\mathrm{d}\psi_{2}}{\mathrm{d}x}\right|_{x=0}\\
+\left.\frac{\mathrm{d}\psi_{1}}{\mathrm{d}x}\right|_{x=a} & =\left.\frac{\mathrm{d}\psi_{3}}{\mathrm{d}x}\right|_{x=a}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cari persamaan matriks dan determinan dari matriks tersebut:
+\begin_inset Formula 
+\[
+\frac{\left(\kappa^{2}-K^{2}\right)}{2\kappa K}\sinh(\kappa b)\sin(Ka)+\cosh(\kappa b)\cos(Ka)=\cosh(k(a+b))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s
+\end_layout
+
+\begin_layout Standard
+s 
+\end_layout
+
+\end_body
+\end_document
