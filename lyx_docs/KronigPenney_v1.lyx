@@ -96,6 +96,26 @@ Asumsikan solusi berbentuk:
 \end_layout
 
 \begin_layout Standard
+Dengan definisi
+\begin_inset Formula 
+\[
+E=\frac{\hbar^{2}K^{2}}{2m}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+U_{0}-E=\frac{\hbar^{2}k^{2}}{2m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Karena sistem periodik:
 \begin_inset Formula 
 \[
@@ -138,7 +158,7 @@ Syarat batas:
 Cari persamaan matriks dan determinan dari matriks tersebut:
 \begin_inset Formula 
 \[
-\frac{\left(\kappa^{2}-K^{2}\right)}{2\kappa K}\sinh(\kappa b)\sin(Ka)+\cosh(\kappa b)\cos(Ka)=\cosh(k(a+b))
+\frac{\left(\kappa^{2}-K^{2}\right)}{2\kappa K}\sinh(\kappa b)\sin(Ka)+\cosh(\kappa b)\cos(Ka)=\cos(k(a+b))
 \]
 
 \end_inset
@@ -147,7 +167,39 @@ Cari persamaan matriks dan determinan dari matriks tersebut:
 \end_layout
 
 \begin_layout Standard
-s
+Dengan menggunakan limit 
+\begin_inset Formula $b\rightarrow0$
+\end_inset
+
+, 
+\begin_inset Formula $U_{0}\rightarrow\infty$
+\end_inset
+
+, sehingga hasilkali 
+\begin_inset Formula $U_{0}b$
+\end_inset
+
+ adalah konstan, atau 
+\begin_inset Formula $\kappa^{2}b$
+\end_inset
+
+ adalah konstanta yang tidak bergantung pada 
+\begin_inset Formula $E$
+\end_inset
+
+ dan 
+\begin_inset Formula $\kappa b\rightarrow0$
+\end_inset
+
+, diperoleh persamaan yang lebih sederhana:
+\begin_inset Formula 
+\[
+\frac{\kappa^{2}b}{2K}\sin(Ka)+\cos(Ka)=\cos(ka)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
